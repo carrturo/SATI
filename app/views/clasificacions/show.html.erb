@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @clasificacion.nombre %>
+</p>
+
+<p>
+  <strong>Edadmin:</strong>
+  <%= @clasificacion.edadMin %>
+</p>
+
+<p>
+  <strong>Edadmax:</strong>
+  <%= @clasificacion.edadMax %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @clasificacion.comentario %>
+</p>
+
+<%= link_to 'Edit', edit_clasificacion_path(@clasificacion) %> |
+<%= link_to 'Back', clasificacions_path %>

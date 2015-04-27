@@ -1,0 +1,67 @@
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Clasificaciones</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Clasificaciones</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<div>
+  <div class="jumbotron">
+    <%= link_to new_clasificacion_path do %>
+        <i class="fa fa-plus-square bigicon"  style="font-size:30px"></i>
+    <% end %>
+    
+ <div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-success"> 
+    <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+    
+    </div>
+   <table class="table table-striped ">
+      <thead>
+                                        <tr>
+                                            <th>Nombre </th>
+                                            <th>Edad minima</th>
+                                            <th>Edad maxima</th>
+                                            <th>Comentario</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% @clasificacions.each do |clasificacion| %>
+                                                   <tr>
+                                                     <td><%= clasificacion.nombre %></td>
+                                                     <td><%= clasificacion.edadMin %></td>
+                                                     <td><%= clasificacion.edadMax %></td>
+                                                     <td><%= clasificacion.comentario %></td>
+                                                    <td> <%= link_to edit_clasificacion_path(clasificacion) do %>
+                                                         <i class="fa fa-pencil-square bigicon"  style="font-size:30px"></i>
+                                                          <% end %>
+                                                   </td>
+
+                                                  <td>
+                                                    <%= link_to clasificacion, method: :delete do %>
+                                                         <i class="fa fa-minus-square bigicon" style="font-size:30px"></i>
+                                                   <% end %>
+                                                   </td>
+                                                  </tr> 
+      
+                              <% end %>
+                                    </tbody>
+   </table>
+ </div>   
+ </div>
+   
+</div>
+
+<br>
+
+

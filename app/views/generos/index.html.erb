@@ -1,0 +1,65 @@
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Generos</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Generos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="jumbotron">
+   <div style="background-color:#eeeeee;">
+   <%= link_to new_genero_path do %>
+        <i class="fa fa-plus-square bigicon"  style="font-size:30px"></i>
+  <% end %>
+      
+       <div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-success"> 
+    <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+    
+    </div>
+   <table class="table table-striped ">
+      <thead>
+           <tr>
+            <th>Nombre</th>
+            <th>Comentario</th>
+           </tr>
+      </thead>
+        <tbody>
+           <% @generos.each do |genero| %>
+          <tr>
+           <td><%= genero.nombre %></td>
+           <td><%= genero.comentario %></td>
+        <td> <%= link_to edit_genero_path(genero) do %>
+            <i class="fa fa-pencil-square bigicon"  style="font-size:30px"></i>
+              <% end %>
+        </td>
+ 
+      <td>
+        <%= link_to genero, method: :delete do %>
+           <i class="fa fa-minus-square bigicon" style="font-size:30px"></i>
+        <% end %>
+           </td>
+           </tr> 
+      
+        <% end %>
+     </tbody>
+   </table>
+ </div>   
+ </div>
+ </div> 
+ </div>
+
+
+
+<br>
+
+

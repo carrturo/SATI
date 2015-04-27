@@ -1,39 +1,64 @@
  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+   
    <section id="showcase" name="showcase"></section>
    <div id="showcase">
     <div class="container">
-       <div class="row">
-             <div class="col-lg-8 col-lg-offset-2">
+       <div class="col-lg-2">
+	    		
+         <p><%= image_tag("logom.png",size:"300x200") %></p>
+              <div class="col-lg-2 col-lg-offset-1">       
+	    			   <p><%= image_tag("arrow1.png")%> </p>
+              </div>  
+	    		</div>
+         <br>
+       <div class="row centered">
+             <div class="col-lg-8 col-lg-offset-1">
 					<div id="carousel-example-generic" class="carousel slide">
 					  <!-- Indicators -->
 					  <ol class="carousel-indicators">
 					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 					  </ol>
 					
-					  <!-- Wrapper for slides -->
+					  
 					  <div class="carousel-inner">
 					    <div class="item active">
-                <%= image_tag("item-01.png") %>
-                
-					      <img src="assets/img/item-01.png" alt="">
-					    </div>
+                <%= image_tag("C1.png") %>
+              </div>
 					    <div class="item">
-					      <img src="assets/img/item-02.png" alt="">
+					      <%= image_tag("C2.png") %>
 					    </div>
+              
+              <div class="item">
+              <%= image_tag("C3.png") %>
+              </div>
 					  </div>
 					</div>
 				</div>
+          
        </div>  
     </div>
    </div>
 
+   
+	<section id="quienessomos" name="quienessomos"></section>
+	
+	<div id="intro">
+		<div class="container">
+			<div class="row centered">
+				<h1>¿Quienes somos?</h1>
+				<br>
+				<br>
+        <p> Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insecto. Estaba echado de espaldas sobre un duro caparazón y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo. Numerosas patas, penosamente delgadas en comparación con el grosor normal de sus piernas, se agitaban sin concierto. - ¿Qué me ha ocurrido? No estaba soñando. Su habitación, una habitación normal, aunque muy pequeña, tenía el aspecto habitual. Sobre la mesa había desparramado un muestrario de paños - Samsa era viajante de comercio-, y de la pared colgaba una estampa recientemente recortada de una revista ilustrada y puesta en un marco dorado. La estampa mostraba a una mujer tocada con un gorro de pieles, envuelta en una estola también de pieles, y que, muy erguida, esgrimía un amplio manguito, asimismo de piel, que ocultaba todo su antebrazo. Gregorio miró hacia la ventana; estaba nublado, y sobre el cinc del alféizar repiqueteaban las gotas de lluvia, lo que le hizo sentir una gran melancolía. </p>
+		  </div>
+			<br>
+			
+    </div> 
+	</div>
 	
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.js"></script>
+    
 	<script>
 	$('.carousel').carousel({
 	  interval: 3500

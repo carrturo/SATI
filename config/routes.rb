@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :clasificacions
+
+  resources :generos
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

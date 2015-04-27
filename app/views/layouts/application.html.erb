@@ -26,12 +26,20 @@
 	        </div>
 	        <div class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="#home" class="smothscroll">Inicio</a></li>
-	            <li><a href="#desc" class="smothscroll">Actores</a></li>
-	            <li><a href="#showcase" class="smothScroll">Cartelera</a></li>
-              <li><a href="#showcase" class="smothScroll">Obras</a></li>
-	            <li><a href="#contact" class="smothScroll">Contacto</a></li>
-	          </ul>
+	            <li class="active"><%= link_to 'Inicio', root_path, class:'smothScroll' %></li>
+	            <li><a href="#quienessomos" class="smothscroll">¿Quienes somos?</a></li>
+              <li><a href="#desc" class="smothscroll">Actores</a></li>
+	            <li><a href="#cartelera" class="smothScroll">Cartelera</a></li>
+              <li><a href="#obras" class="smothScroll">Obras</a></li>
+	            <li><a href="#contacto" class="smothScroll">Contacto</a></li>
+              <li class="dropdown">
+                <a href="#administracion" class="smothScroll dropdown-toggle" data-toggle="dropdown" role="button">Administración <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li> <%= link_to "Generos", generos_path %></li>
+                  <li> <%= link_to "Clasificaciones", clasificacions_path %></li>
+                </ul>
+              </li>   
+           </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </div>

@@ -3,7 +3,7 @@
 <fieldset>
   <% if @genero.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@genero.errors.count, "error") %> prohibited this genero from being saved:</h2>
+      <h2><%=@genero.errors.count %> error(es) al guardar el género por la siguiente(s) razón(es):</h2>
 
       <ul>
       <% @genero.errors.full_messages.each do |message| %>

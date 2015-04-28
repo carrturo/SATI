@@ -19523,3 +19523,3037 @@ Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:5
 
 
 Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:51 +0000
+
+
+Started GET "/" for 190.56.253.122 at 2015-04-28 16:43:15 +0000
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.0) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.0) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/" for 190.56.253.122 at 2015-04-28 16:43:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (12.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 360ms (Views: 337.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:51 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:51 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:51 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:43:51 +0000
+
+
+Started GET "/" for 190.56.253.122 at 2015-04-28 16:44:42 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 155ms (Views: 154.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:43 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:44:43 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:44:43 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:44:43 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:44:43 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:44:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:44 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:44 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:44 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/logom.png" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/arrow1.png" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/C1.png" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/C2.png" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/assets/C3.png" for 190.56.253.122 at 2015-04-28 16:44:45 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:44:48 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/genero.rb:4:in `<class:Genero>'
+  app/models/genero.rb:1:in `<top (required)>'
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:44:56 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/genero.rb:4:in `<class:Genero>'
+  app/models/genero.rb:1:in `<top (required)>'
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:46:34 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  app/models/genero.rb:4:in `<class:Genero>'
+  app/models/genero.rb:1:in `<top (required)>'
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:47:19 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected $undefined, expecting ']'
+  validates_format_of :nombre, :with => [a-zA-Z0-9\s]+
+                                                   ^):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.6ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:48:45 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:2: syntax error, unexpected '^'
+  regex = ^[a-zA-Z\d\s]*$
+           ^
+/home/action/workspace/SATI/app/models/genero.rb:2: syntax error, unexpected $undefined, expecting keyword_do or '{' or '('
+  regex = ^[a-zA-Z\d\s]*$
+                   ^
+/home/action/workspace/SATI/app/models/genero.rb:2: `$
+' is not allowed as a global variable name):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.1ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:49:05 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected '^'
+  validates :nombre => { :with => ^[a-zA-Z\d\s]*$ }
+                                   ^
+/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected $undefined, expecting keyword_do or '{' or '('
+  validates :nombre => { :with => ^[a-zA-Z\d\s]*$ }
+                                           ^
+/home/action/workspace/SATI/app/models/genero.rb:4: `$ ' is not allowed as a global variable name):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.6ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:49:29 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected '^'
+  validates_format_of :nombre, :with => ^[a-zA-Z\d\s]*$
+                                         ^
+/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected $undefined, expecting keyword_do or '{' or '('
+  validates_format_of :nombre, :with => ^[a-zA-Z\d\s]*$
+                                                 ^
+/home/action/workspace/SATI/app/models/genero.rb:4: `$
+' is not allowed as a global variable name):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.1ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:50:46 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected '^'
+  validates_format_of :nombre, :with => ^[a-zA-Z]
+                                         ^):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:51:31 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.8ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 159ms (Views: 154.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:32 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:32 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:32 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:32 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:33 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:33 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:33 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:34 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:51:34 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff" for 190.56.253.122 at 2015-04-28 16:51:34 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:51:49 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 152ms (Views: 147.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:49 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:49 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:49 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:49 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:51:50 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:51:57 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:4: unterminated regexp meets end of file
+/home/action/workspace/SATI/app/models/genero.rb:4: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:52:08 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 164ms (Views: 159.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:09 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:09 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:10 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:10 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:52:11 +0000
+
+
+Started GET "/generos/new" for 190.56.253.122 at 2015-04-28 16:52:13 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (9.8ms)
+  Rendered generos/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 161ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:52:14 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:52:17 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"spfas", "comentario"=>"fzfg"}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (25.2ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY 'spfas' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `generos` (`comentario`, `created_at`, `nombre`, `updated_at`) VALUES ('fzfg', '2015-04-28 16:52:17', 'spfas', '2015-04-28 16:52:17')[0m
+  [1m[35m (23.3ms)[0m  COMMIT
+Redirected to http://green-box-37-202764.use1.nitrousbox.com/generos
+Completed 302 Found in 64ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:52:17 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 145ms (Views: 143.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:18 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:18 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:18 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:18 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:52:18 +0000
+
+
+Started GET "/generos/new" for 190.56.253.122 at 2015-04-28 16:52:23 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.1ms)
+  Rendered generos/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 150ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:52:24 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:52:27 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"3452", "comentario"=>"gfdh"}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '3452' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (2.4ms)
+  Rendered generos/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 156ms (Views: 147.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:28 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:28 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:28 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:28 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:52:28 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:52:37 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"$$$dfg", "comentario"=>"gfdh"}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '$$$dfg' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `generos` (`comentario`, `created_at`, `nombre`, `updated_at`) VALUES ('gfdh', '2015-04-28 16:52:37', '$$$dfg', '2015-04-28 16:52:37')[0m
+  [1m[35m (27.3ms)[0m  COMMIT
+Redirected to http://green-box-37-202764.use1.nitrousbox.com/generos
+Completed 302 Found in 32ms (ActiveRecord: 28.1ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:52:39 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 147ms (Views: 145.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:40 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:52:40 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:40 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:52:40 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:52:41 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:53:50 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 155ms (Views: 150.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:51 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:52 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:52 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:53 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:53 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:53 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:54 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:54 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:54 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:53:54 +0000
+
+
+Started DELETE "/generos/7" for 190.56.253.122 at 2015-04-28 16:53:56 +0000
+Processing by GenerosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "id"=>"7"}
+  [1m[36mGenero Load (0.5ms)[0m  [1mSELECT  `generos`.* FROM `generos`  WHERE `generos`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `generos` WHERE `generos`.`id` = 7[0m
+  [1m[35m (31.0ms)[0m  COMMIT
+Redirected to http://green-box-37-202764.use1.nitrousbox.com/generos
+Completed 302 Found in 35ms (ActiveRecord: 31.9ms)
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 149ms (Views: 147.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:53:57 +0000
+
+
+Started GET "/generos/new" for 190.56.253.122 at 2015-04-28 16:53:58 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.2ms)
+  Rendered generos/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 155ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:53:58 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:54:01 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"324", "comentario"=>"sfdvsd"}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '324' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (1.9ms)
+  Rendered generos/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 154ms (Views: 148.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:01 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:02 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:02 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:02 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:54:03 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:54:09 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"$$gdfg", "comentario"=>"sfdvsd"}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '$$gdfg' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (1.8ms)
+  Rendered generos/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 153ms (Views: 149.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:09 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:09 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:09 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:09 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:09 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:54:10 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:54:16 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"`fgfgd", "comentario"=>"sfdvsd"}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '`fgfgd' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (1.7ms)
+  Rendered generos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 149ms (Views: 145.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:16 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:16 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:16 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:54:17 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:54:30 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"dsoafjas2340'242", "comentario"=>"sfdvsd"}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY 'dsoafjas2340\'242' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (1.7ms)
+  Rendered generos/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 156ms (Views: 152.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:31 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:31 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:31 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:31 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:31 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:54:31 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:54:40 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 153ms (Views: 152.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/main.css?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:42 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:54:42 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:55:27 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 150ms (Views: 148.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:28 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:28 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:28 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:28 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:55:28 +0000
+
+
+Started GET "/generos/new" for 190.56.253.122 at 2015-04-28 16:55:30 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.1ms)
+  Rendered generos/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 150ms (Views: 149.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:55:30 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:55:38 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"%234dfgdfgg", "comentario"=>"egg"}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '%234dfgdfgg' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (1.6ms)
+  Rendered generos/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 147ms (Views: 143.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:38 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:38 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:38 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:38 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:55:39 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:55:43 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"calos bane", "comentario"=>"egg"}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY 'calos bane' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (1.7ms)
+  Rendered generos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 160ms (Views: 155.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:46 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:47 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:47 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:47 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:55:47 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:55:56 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"csdc_sdf", "comentario"=>"egg"}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY 'csdc_sdf' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (1.7ms)
+  Rendered generos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 155ms (Views: 151.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:56 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:56 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:55:56 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:55:56 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:55:57 +0000
+
+
+Started GET "/generos" for 190.56.253.122 at 2015-04-28 16:56:01 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 146ms (Views: 145.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:56:03 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:56:03 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:56:03 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:56:03 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:56:03 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:56:04 +0000
+
+
+Started GET "/generos/new" for 190.56.253.122 at 2015-04-28 16:56:05 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.1ms)
+  Rendered generos/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 156ms (Views: 155.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:56:06 +0000
+
+
+Started GET "/generos/new" for 190.56.253.122 at 2015-04-28 16:56:14 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.2ms)
+  Rendered generos/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 156ms (Views: 155.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:56:15 +0000
+
+
+Started POST "/generos" for 190.56.253.122 at 2015-04-28 16:56:15 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (3.2ms)
+  Rendered generos/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 154ms (Views: 149.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 190.56.253.122 at 2015-04-28 16:56:15 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 190.56.253.122 at 2015-04-28 16:56:16 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 190.56.253.122 at 2015-04-28 16:56:16 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 190.56.253.122 at 2015-04-28 16:56:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 190.56.253.122 at 2015-04-28 16:56:16 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 190.56.253.122 at 2015-04-28 16:56:16 +0000
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 17:34:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 675ms (Views: 652.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:34:56 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:34:57 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:34:57 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:34:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:34:57 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:34:58 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 17:34:58 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 17:34:58 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 17:34:58 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 17:35:13 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/genero.rb:2:in `<class:Genero>'
+  app/models/genero.rb:1:in `<top (required)>'
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 17:35:14 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/genero.rb:2:in `<class:Genero>'
+  app/models/genero.rb:1:in `<top (required)>'
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.3ms)
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 17:38:00 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/action/workspace/SATI/app/models/genero.rb:2: syntax error, unexpected '{', expecting keyword_end
+...comentario, :presence => true { :message => "Todos los campo...
+...                               ^
+/home/action/workspace/SATI/app/models/genero.rb:2: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 17:38:16 +0000
+Processing by GenerosController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/genero.rb:3:in `<class:Genero>'
+  app/models/genero.rb:1:in `<top (required)>'
+  app/controllers/generos_controller.rb:7:in `index'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 17:38:53 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 162ms (Views: 157.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:53 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/main.css?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:38:54 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:38:56 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff" for 200.107.209.2 at 2015-04-28 17:38:56 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 17:38:58 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (10.8ms)
+  Rendered generos/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 178ms (Views: 177.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:38:58 +0000
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 17:38:59 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.5ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (4.4ms)
+  Rendered generos/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 176ms (Views: 155.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:39:00 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:39:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:39:00 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:39:00 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:39:00 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:39:00 +0000
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 17:39:47 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (3.6ms)
+  Rendered generos/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 170ms (Views: 155.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:39:47 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:39:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:39:47 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:39:47 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:39:47 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:39:48 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 17:41:22 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 154ms (Views: 149.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:41:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:41:23 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:41:23 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:41:23 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:41:23 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:41:23 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 17:41:26 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.2ms)
+  Rendered generos/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 145ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:41:26 +0000
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 17:41:27 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (3.1ms)
+  Rendered generos/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 153ms (Views: 146.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:41:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:41:28 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:41:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:41:28 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:41:28 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:41:28 +0000
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 17:42:15 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.6ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (3.6ms)
+  Rendered generos/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 166ms (Views: 149.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 17:42:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 17:42:16 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 17:42:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 17:42:16 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 17:42:16 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 17:42:16 +0000
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 20:38:39 +0000
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.0) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.0) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 20:39:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (9.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 291ms (Views: 269.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clasificacions.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:06 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:06 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:06 +0000
+
+
+Started GET "/assets/main.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 20:39:07 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 20:39:55 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (16.3ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 190ms (Views: 168.8ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 20:39:55 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 20:39:57 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (15.2ms)
+  Rendered generos/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 161ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 20:39:58 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.7ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (4.2ms)
+  Rendered generos/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 166ms (Views: 146.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:59 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 20:39:59 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:59 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 20:39:59 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 20:39:59 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 20:40:00 +0000
+
+
+Started GET "/clasificacions" for 200.107.209.2 at 2015-04-28 20:40:23 +0000
+Processing by ClasificacionsController#index as HTML
+  [1m[35mClasificacion Load (40.7ms)[0m  SELECT `clasificacions`.* FROM `clasificacions`
+  Rendered clasificacions/index.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 212ms (Views: 165.8ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 20:40:24 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 20:40:24 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 20:40:24 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 20:40:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 20:40:24 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 20:40:24 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 20:40:25 +0000
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 20:40:26 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (82.5ms)
+  Rendered clasificacions/new.html.erb within layouts/application (85.6ms)
+Completed 500 Internal Server Error in 107ms
+
+SyntaxError (/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected tIVAR, expecting keyword_end
+... la siguiente(s) @clasificacion.errors.count razón o razone...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected '<'
+...errors.count razón o razones:</h2>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:11: unknown regexp option - l
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:14: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-user bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+...<i class="fa fa-user bigicon"></i><br>Nombre*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:19: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:21: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:22: syntax error, unexpected '<'
+   <div class="form-group">
+    ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad minima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:24: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:26: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:28: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad maxima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:30: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:32: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:34: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-bars bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+...<i class="fa fa-bars bigicon"></i>Comentario*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:36: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:38: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:40: syntax error, unexpected '<'
+<div class="col-md-2 col-md-offset-5 actions" >
+ ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:43: syntax error, unexpected '<', expecting keyword_end
+      </div> 
+       ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:44: unknown regexp options - fldt
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:47: syntax error, unexpected '.'
+    .header {
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:48: syntax error, unexpected ':', expecting '}'
+        color: #36A0FF;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:50: syntax error, unexpected ':', expecting '}'
+        padding: 10px;
+                ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:54: syntax error, unexpected tLABEL
+   font-size:17px;
+             ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:58: syntax error, unexpected tLABEL
+        font-size: 25px;
+                  ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:59: syntax error, unexpected ':', expecting '}'
+        color: #00C12B;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:61: unterminated regexp meets end of file):
+  app/views/clasificacions/new.html.erb:18:in `_app_views_clasificacions_new_html_erb___467510914133970334_69866960198060'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 20:40:27 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (1.6ms)
+  Rendered clasificacions/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected tIVAR, expecting keyword_end
+... la siguiente(s) @clasificacion.errors.count razón o razone...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected '<'
+...errors.count razón o razones:</h2>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:11: unknown regexp option - l
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:14: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-user bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+...<i class="fa fa-user bigicon"></i><br>Nombre*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:19: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:21: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:22: syntax error, unexpected '<'
+   <div class="form-group">
+    ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad minima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:24: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:26: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:28: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad maxima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:30: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:32: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:34: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-bars bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+...<i class="fa fa-bars bigicon"></i>Comentario*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:36: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:38: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:40: syntax error, unexpected '<'
+<div class="col-md-2 col-md-offset-5 actions" >
+ ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:43: syntax error, unexpected '<', expecting keyword_end
+      </div> 
+       ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:44: unknown regexp options - fldt
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:47: syntax error, unexpected '.'
+    .header {
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:48: syntax error, unexpected ':', expecting '}'
+        color: #36A0FF;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:50: syntax error, unexpected ':', expecting '}'
+        padding: 10px;
+                ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:54: syntax error, unexpected tLABEL
+   font-size:17px;
+             ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:58: syntax error, unexpected tLABEL
+        font-size: 25px;
+                  ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:59: syntax error, unexpected ':', expecting '}'
+        color: #00C12B;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:61: unterminated regexp meets end of file):
+  app/views/clasificacions/new.html.erb:18:in `_app_views_clasificacions_new_html_erb___467510914133970334_69866958471260'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 20:40:32 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (1.5ms)
+  Rendered clasificacions/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected tIVAR, expecting keyword_end
+... la siguiente(s) @clasificacion.errors.count razón o razone...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected '<'
+...errors.count razón o razones:</h2>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:11: unknown regexp option - l
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:14: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-user bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+...<i class="fa fa-user bigicon"></i><br>Nombre*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:19: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:21: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:22: syntax error, unexpected '<'
+   <div class="form-group">
+    ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad minima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:24: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:26: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:28: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad maxima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:30: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:32: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:34: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-bars bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+...<i class="fa fa-bars bigicon"></i>Comentario*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:36: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:38: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:40: syntax error, unexpected '<'
+<div class="col-md-2 col-md-offset-5 actions" >
+ ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:43: syntax error, unexpected '<', expecting keyword_end
+      </div> 
+       ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:44: unknown regexp options - fldt
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:47: syntax error, unexpected '.'
+    .header {
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:48: syntax error, unexpected ':', expecting '}'
+        color: #36A0FF;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:50: syntax error, unexpected ':', expecting '}'
+        padding: 10px;
+                ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:54: syntax error, unexpected tLABEL
+   font-size:17px;
+             ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:58: syntax error, unexpected tLABEL
+        font-size: 25px;
+                  ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:59: syntax error, unexpected ':', expecting '}'
+        color: #00C12B;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:61: unterminated regexp meets end of file):
+  app/views/clasificacions/new.html.erb:18:in `_app_views_clasificacions_new_html_erb___467510914133970334_69866960198060'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 20:40:33 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (1.6ms)
+  Rendered clasificacions/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected tIVAR, expecting keyword_end
+... la siguiente(s) @clasificacion.errors.count razón o razone...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected '<'
+...errors.count razón o razones:</h2>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:11: unknown regexp option - l
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:14: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-user bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+...<i class="fa fa-user bigicon"></i><br>Nombre*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:19: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:21: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:22: syntax error, unexpected '<'
+   <div class="form-group">
+    ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad minima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:24: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:26: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:28: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad maxima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:30: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:32: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:34: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-bars bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+...<i class="fa fa-bars bigicon"></i>Comentario*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:36: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:38: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:40: syntax error, unexpected '<'
+<div class="col-md-2 col-md-offset-5 actions" >
+ ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:43: syntax error, unexpected '<', expecting keyword_end
+      </div> 
+       ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:44: unknown regexp options - fldt
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:47: syntax error, unexpected '.'
+    .header {
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:48: syntax error, unexpected ':', expecting '}'
+        color: #36A0FF;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:50: syntax error, unexpected ':', expecting '}'
+        padding: 10px;
+                ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:54: syntax error, unexpected tLABEL
+   font-size:17px;
+             ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:58: syntax error, unexpected tLABEL
+        font-size: 25px;
+                  ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:59: syntax error, unexpected ':', expecting '}'
+        color: #00C12B;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:61: unterminated regexp meets end of file):
+  app/views/clasificacions/new.html.erb:18:in `_app_views_clasificacions_new_html_erb___467510914133970334_69866958471260'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.1ms)
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 20:50:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 3679ms (Views: 3656.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 20:50:28 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 20:50:38 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.5ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 203ms (Views: 197.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 20:50:38 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 20:50:40 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (11.5ms)
+  Rendered generos/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 20:50:42 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (4.3ms)
+  Rendered generos/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 160ms (Views: 140.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 20:50:43 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 20:50:43 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 20:50:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 20:50:43 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 20:50:43 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 20:50:43 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 21:00:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.5ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 539ms (Views: 511.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:00:30 +0000
+
+
+Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 21:00:30 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:00:30 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:00:30 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:00:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:00:30 +0000
+
+
+Started GET "/assets/main.css?body=1" for 200.107.209.2 at 2015-04-28 21:00:31 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:00:31 +0000
+
+
+Started GET "/clasificacions" for 200.107.209.2 at 2015-04-28 21:00:37 +0000
+Processing by ClasificacionsController#index as HTML
+  [1m[36mClasificacion Load (21.7ms)[0m  [1mSELECT `clasificacions`.* FROM `clasificacions`[0m
+  Rendered clasificacions/index.html.erb within layouts/application (86.7ms)
+Completed 200 OK in 2663ms (Views: 2612.5ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:00:40 +0000
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 21:00:42 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (9.0ms)
+  Rendered clasificacions/new.html.erb within layouts/application (46.6ms)
+Completed 500 Internal Server Error in 51ms
+
+SyntaxError (/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected tIVAR, expecting keyword_end
+... la siguiente(s) @clasificacion.errors.count razón o razone...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected '<'
+...errors.count razón o razones:</h2>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:11: unknown regexp option - l
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:14: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-user bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+...<i class="fa fa-user bigicon"></i><br>Nombre*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:19: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:21: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:22: syntax error, unexpected '<'
+   <div class="form-group">
+    ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad minima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:24: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:26: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:28: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad maxima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:30: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:32: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:34: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-bars bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+...<i class="fa fa-bars bigicon"></i>Comentario*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:36: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:38: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:40: syntax error, unexpected '<'
+<div class="col-md-2 col-md-offset-5 actions" >
+ ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:43: syntax error, unexpected '<', expecting keyword_end
+      </div> 
+       ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:44: unknown regexp options - fldt
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:47: syntax error, unexpected '.'
+    .header {
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:48: syntax error, unexpected ':', expecting '}'
+        color: #36A0FF;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:50: syntax error, unexpected ':', expecting '}'
+        padding: 10px;
+                ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:54: syntax error, unexpected tLABEL
+   font-size:17px;
+             ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:58: syntax error, unexpected tLABEL
+        font-size: 25px;
+                  ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:59: syntax error, unexpected ':', expecting '}'
+        color: #00C12B;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:61: unterminated regexp meets end of file):
+  app/views/clasificacions/new.html.erb:18:in `_app_views_clasificacions_new_html_erb__4469557225882437429_70312940727960'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.5ms)
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 21:00:42 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (1.5ms)
+  Rendered clasificacions/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected tIVAR, expecting keyword_end
+... la siguiente(s) @clasificacion.errors.count razón o razone...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:7: syntax error, unexpected '<'
+...errors.count razón o razones:</h2>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:11: unknown regexp option - l
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:14: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-user bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: syntax error, unexpected '<'
+...<i class="fa fa-user bigicon"></i><br>Nombre*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:18: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:19: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:21: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:22: syntax error, unexpected '<'
+   <div class="form-group">
+    ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad minima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:23: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:24: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:26: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:28: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-keyboard-o big...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: syntax error, unexpected '<'
+...ss="fa fa-keyboard-o bigicon"></i><br>Edad maxima*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:29: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:30: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:32: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:34: syntax error, unexpected '<'
+    <div class="form-group">
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+       <span class="col-md-1 col-md-o...
+        ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+... col-md-offset-3 text-center"><i class="fa fa-bars bigicon">...
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: syntax error, unexpected '<'
+...<i class="fa fa-bars bigicon"></i>Comentario*</span>
+...                               ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:35: unknown regexp options - pa
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:36: syntax error, unexpected '<'
+           <div class="col-md-8">
+            ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:38: unknown regexp options - dv
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:40: syntax error, unexpected '<'
+<div class="col-md-2 col-md-offset-5 actions" >
+ ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:43: syntax error, unexpected '<', expecting keyword_end
+      </div> 
+       ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:44: unknown regexp options - fldt
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:47: syntax error, unexpected '.'
+    .header {
+     ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:48: syntax error, unexpected ':', expecting '}'
+        color: #36A0FF;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:50: syntax error, unexpected ':', expecting '}'
+        padding: 10px;
+                ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:54: syntax error, unexpected tLABEL
+   font-size:17px;
+             ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:58: syntax error, unexpected tLABEL
+        font-size: 25px;
+                  ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:59: syntax error, unexpected ':', expecting '}'
+        color: #00C12B;
+              ^
+/home/action/workspace/SATI/app/views/clasificacions/_form.html.erb:61: unterminated regexp meets end of file):
+  app/views/clasificacions/new.html.erb:18:in `_app_views_clasificacions_new_html_erb__4469557225882437429_70312932443340'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 21:01:00 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 164ms (Views: 163.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 21:01:01 +0000
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (26.2ms)
+  Rendered clasificacions/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 181ms (Views: 180.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clasificacions.css?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/main.css?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 21:03:15 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:03:16 +0000
+
+
+Started POST "/clasificacions" for 200.107.209.2 at 2015-04-28 21:03:18 +0000
+Processing by ClasificacionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "clasificacion"=>{"nombre"=>"", "edadMin"=>"", "edadMax"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mClasificacion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `clasificacions`  WHERE `clasificacions`.`nombre` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered clasificacions/_form.html.erb (3.5ms)
+  Rendered clasificacions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 174ms (Views: 151.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:18 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:03:18 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:03:18 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:03:18 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 21:04:39 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.4ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+  Rendered generos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 161ms (Views: 159.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:04:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:04:40 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:04:40 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:04:41 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:04:41 +0000
+
+
+Started GET "/clasificacions" for 200.107.209.2 at 2015-04-28 21:04:44 +0000
+Processing by ClasificacionsController#index as HTML
+  [1m[35mClasificacion Load (0.4ms)[0m  SELECT `clasificacions`.* FROM `clasificacions`
+  Rendered clasificacions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 140ms (Views: 138.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:04:44 +0000
+
+
+Started GET "/clasificacions" for 200.107.209.2 at 2015-04-28 21:04:56 +0000
+Processing by ClasificacionsController#index as HTML
+  [1m[36mClasificacion Load (0.4ms)[0m  [1mSELECT `clasificacions`.* FROM `clasificacions`[0m
+  Rendered clasificacions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 144ms (Views: 142.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:04:57 +0000
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 21:05:00 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (3.6ms)
+  Rendered clasificacions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 180ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:05:01 +0000
+
+
+Started POST "/clasificacions" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+Processing by ClasificacionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "clasificacion"=>{"nombre"=>"", "edadMin"=>"", "edadMax"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mClasificacion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `clasificacions`  WHERE `clasificacions`.`nombre` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered clasificacions/_form.html.erb (6.0ms)
+  Rendered clasificacions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 155ms (Views: 147.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:05:02 +0000
+
+
+Started POST "/clasificacions" for 200.107.209.2 at 2015-04-28 21:08:34 +0000
+Processing by ClasificacionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "clasificacion"=>{"nombre"=>"", "edadMin"=>"", "edadMax"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mClasificacion Exists (0.4ms)[0m  SELECT  1 AS one FROM `clasificacions`  WHERE `clasificacions`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered clasificacions/_form.html.erb (6.5ms)
+  Rendered clasificacions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 164ms (Views: 157.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:08:35 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:08:35 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:08:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:08:35 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:08:35 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:08:35 +0000
+
+
+Started POST "/clasificacions" for 200.107.209.2 at 2015-04-28 21:12:11 +0000
+Processing by ClasificacionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A3+cDjcvHSAIw0n8p8t5MPnO8kEiqsDqdm0ohRx0zkw=", "clasificacion"=>{"nombre"=>"", "edadMin"=>"", "edadMax"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mClasificacion Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `clasificacions`  WHERE `clasificacions`.`nombre` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered clasificacions/_form.html.erb (5.8ms)
+  Rendered clasificacions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 183ms (Views: 163.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:12:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:12:12 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:12:12 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:12:12 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:12:12 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:12:12 +0000
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 21:19:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 291ms (Views: 269.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 21:19:47 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 21:19:50 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 174ms (Views: 168.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:19:51 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 21:19:52 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (9.7ms)
+  Rendered generos/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 157ms (Views: 155.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 21:19:54 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (3.7ms)
+  Rendered generos/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 171ms (Views: 152.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:19:55 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:19:55 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:19:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:19:55 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:19:55 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:19:55 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 21:21:48 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.5ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 163ms (Views: 161.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:21:49 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:21:49 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:21:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:21:49 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:21:49 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:21:49 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 21:21:51 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (2.1ms)
+  Rendered generos/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 157ms (Views: 156.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 21:21:53 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (3.5ms)
+  Rendered generos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 169ms (Views: 164.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:21:54 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:21:54 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:21:54 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:21:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:21:54 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:21:54 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 21:22:17 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:22:18 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:18 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:19 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:22:19 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:22:19 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 21:22:20 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (2.0ms)
+  Rendered generos/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 156ms (Views: 155.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 21:22:23 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (3.5ms)
+  Rendered generos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 150ms (Views: 145.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:22:24 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:22:25 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:25 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:25 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:25 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:22:25 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 21:22:51 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.4ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 150ms (Views: 148.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:22:52 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:52 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:52 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:22:52 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:22:52 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 21:22:54 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (1.9ms)
+  Rendered generos/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 159ms (Views: 158.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 21:22:57 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (3.5ms)
+  Rendered generos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 151ms (Views: 146.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:22:57 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:22:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:57 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:57 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:22:57 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:22:58 +0000
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 21:23:04 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"sdfbg hj", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mGenero Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY 'sdfbg hj' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered generos/_form.html.erb (2.3ms)
+  Rendered generos/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 149ms (Views: 145.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:23:05 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:13 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:13 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:23:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:13 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:23:13 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:23:13 +0000
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 21:23:19 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7nf9EdKsfUSJICvfeVXlvvrPGsz+BTeUj/mR7gY8d4=", "genero"=>{"nombre"=>"fgtfdhg", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY 'fgtfdhg' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (1.8ms)
+  Rendered generos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 152ms (Views: 148.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:23:19 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:20 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:20 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:23:20 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:20 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:23:20 +0000
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 21:23:30 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 151ms (Views: 150.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 21:23:31 +0000
+
+
+Started GET "/clasificacions" for 200.107.209.2 at 2015-04-28 21:24:02 +0000
+Processing by ClasificacionsController#index as HTML
+  [1m[35mClasificacion Load (0.4ms)[0m  SELECT `clasificacions`.* FROM `clasificacions`
+  Rendered clasificacions/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 168ms (Views: 163.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 21:24:02 +0000

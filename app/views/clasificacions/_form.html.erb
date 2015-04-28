@@ -3,8 +3,8 @@
 <%= form_for(@clasificacion, html: { class: 'form-horizontal'}) do |f| %>
 <fieldset>
   <% if @clasificacion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@clasificacion.errors.count, "error") %> prohibited this clasificacion from being saved:</h2>
+    <div id="error_explanation" style="align:center">
+      <h2><%= @clasificacion.errors.count %> error(es) al guardar el género por la siguiente(s) razón(es):</h2>
 
       <ul>
       <% @clasificacion.errors.full_messages.each do |message| %>

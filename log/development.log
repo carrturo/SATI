@@ -19324,3 +19324,202 @@ Started GET "/" for 200.107.209.2 at 2015-04-27 21:17:43 +0000
 Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 147ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 01:25:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (51.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 299ms (Views: 277.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clasificacions.css?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/main.css?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 01:25:35 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 01:25:36 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 01:25:36 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 01:25:41 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.8ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 173ms (Views: 167.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 01:25:41 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 01:25:43 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (9.6ms)
+  Rendered generos/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 157ms (Views: 156.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clasificacions" for 200.107.209.2 at 2015-04-28 01:25:50 +0000
+Processing by ClasificacionsController#index as HTML
+  [1m[36mClasificacion Load (0.7ms)[0m  [1mSELECT `clasificacions`.* FROM `clasificacions`[0m
+  Rendered clasificacions/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 159ms (Views: 153.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/clasificacions/new" for 200.107.209.2 at 2015-04-28 01:25:52 +0000
+Processing by ClasificacionsController#new as HTML
+  Rendered clasificacions/_form.html.erb (3.6ms)
+  Rendered clasificacions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 01:25:57 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 154ms (Views: 153.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.107.209.2 at 2015-04-28 01:33:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 3803ms (Views: 3779.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/logom.png" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 01:33:35 +0000
+
+
+Started GET "/generos" for 200.107.209.2 at 2015-04-28 01:33:38 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.5ms)[0m  SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 201ms (Views: 193.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 01:33:38 +0000
+
+
+Started GET "/generos/new" for 200.107.209.2 at 2015-04-28 01:33:40 +0000
+Processing by GenerosController#new as HTML
+  Rendered generos/_form.html.erb (10.8ms)
+  Rendered generos/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 170ms (Views: 169.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/generos" for 200.107.209.2 at 2015-04-28 01:33:42 +0000
+Processing by GenerosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ejp8PvXy3rU79vdujXn0Is63+1AMdepjtUi2PTU4mTw=", "genero"=>{"nombre"=>"", "comentario"=>""}, "commit"=>"Aceptar"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGenero Exists (0.4ms)[0m  SELECT  1 AS one FROM `generos`  WHERE `generos`.`nombre` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered generos/_form.html.erb (3.8ms)
+  Rendered generos/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 169ms (Views: 149.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 200.107.209.2 at 2015-04-28 01:33:43 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 200.107.209.2 at 2015-04-28 01:33:43 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 200.107.209.2 at 2015-04-28 01:33:43 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 200.107.209.2 at 2015-04-28 01:33:43 +0000
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 200.107.209.2 at 2015-04-28 01:33:44 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:51 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:51 +0000
+
+
+Started GET "/assets/main.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:51 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 200.107.209.2 at 2015-04-28 01:33:51 +0000

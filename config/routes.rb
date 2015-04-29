@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :tipo_tickets
+
+  resources :destrezas
+
+  resources :funcions
+
   resources :clasificacions
 
   resources :generos

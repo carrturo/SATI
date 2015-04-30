@@ -1,0 +1,29 @@
+<%= form_for(@tipo_ticket) do |f| %>
+  <% if @tipo_ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_ticket.errors.count, "error") %> prohibited this tipo_ticket from being saved:</h2>
+
+      <ul>
+      <% @tipo_ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.text_field :precio %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br>
+    <%= f.text_field :comentario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

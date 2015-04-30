@@ -1,0 +1,25 @@
+<%= form_for(@destreza) do |f| %>
+  <% if @destreza.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@destreza.errors.count, "error") %> prohibited this destreza from being saved:</h2>
+
+      <ul>
+      <% @destreza.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br>
+    <%= f.text_field :comentario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

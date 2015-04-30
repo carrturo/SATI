@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @destreza.nombre %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @destreza.comentario %>
+</p>
+
+<%= link_to 'Edit', edit_destreza_path(@destreza) %> |
+<%= link_to 'Back', destrezas_path %>

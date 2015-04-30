@@ -1,0 +1,29 @@
+<h1>Listing tipo_tickets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>Comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_tickets.each do |tipo_ticket| %>
+      <tr>
+        <td><%= tipo_ticket.tipo %></td>
+        <td><%= tipo_ticket.precio %></td>
+        <td><%= tipo_ticket.comentario %></td>
+        <td><%= link_to 'Show', tipo_ticket %></td>
+        <td><%= link_to 'Edit', edit_tipo_ticket_path(tipo_ticket) %></td>
+        <td><%= link_to 'Destroy', tipo_ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo ticket', new_tipo_ticket_path %>

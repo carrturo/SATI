@@ -1,0 +1,27 @@
+<h1>Listing funcions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hora</th>
+      <th>Comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @funcions.each do |funcion| %>
+      <tr>
+        <td><%= funcion.hora %></td>
+        <td><%= funcion.comentario %></td>
+        <td><%= link_to 'Show', funcion %></td>
+        <td><%= link_to 'Edit', edit_funcion_path(funcion) %></td>
+        <td><%= link_to 'Destroy', funcion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Funcion', new_funcion_path %>

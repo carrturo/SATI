@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hora: 2015-04-29 01:55:25
+  comentario: MyString
+
+two:
+  hora: 2015-04-29 01:55:25
+  comentario: MyString

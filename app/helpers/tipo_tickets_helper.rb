@@ -1,0 +1,2 @@
+module TipoTicketsHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing destrezas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destrezas.each do |destreza| %>
+      <tr>
+        <td><%= destreza.nombre %></td>
+        <td><%= destreza.comentario %></td>
+        <td><%= link_to 'Show', destreza %></td>
+        <td><%= link_to 'Edit', edit_destreza_path(destreza) %></td>
+        <td><%= link_to 'Destroy', destreza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destreza', new_destreza_path %>

@@ -28,7 +28,7 @@ class FuncionsController < ApplicationController
 
     respond_to do |format|
       if @funcion.save
-        format.html { redirect_to @funcion, notice: 'Funcion was successfully created.' }
+        format.html { redirect_to funcions_path, notice: 'Funcion was successfully created.' }
         format.json { render :show, status: :created, location: @funcion }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class FuncionsController < ApplicationController
   def update
     respond_to do |format|
       if @funcion.update(funcion_params)
-        format.html { redirect_to @funcion, notice: 'Funcion was successfully updated.' }
+        format.html { redirect_to funcions_path, notice: 'Funcion was successfully updated.' }
         format.json { render :show, status: :ok, location: @funcion }
       else
         format.html { render :edit }

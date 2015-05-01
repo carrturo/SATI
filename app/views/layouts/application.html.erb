@@ -9,11 +9,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+   
 </head>
 <body>
-
+<div class="logo">
     <!-- Fixed navbar -->
-	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+  <div id="navigation" class="navbar navbar-default navbar-fixed-top" <% unless @navbar.nil? %> style="display:none" <% end %> >
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -39,13 +41,14 @@
                   <li> <%= link_to "Clasificaciones", clasificacions_path %></li>
                   <li> <%= link_to "Tipo de tickets", tipo_tickets_path %></li>
                   <li> <%= link_to "Destrezas",destrezas_path %></li>
+                  <li> <%= link_to "Funciones", funcions_path %></li>
                 </ul>
               </li>   
            </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </div>
-
+</div>
 <%= yield %>
 
 </body>

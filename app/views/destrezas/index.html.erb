@@ -1,27 +1,59 @@
-<h1>Listing destrezas</h1>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Destrezas</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Destrezas</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Comentario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @destrezas.each do |destreza| %>
-      <tr>
-        <td><%= destreza.nombre %></td>
-        <td><%= destreza.comentario %></td>
-        <td><%= link_to 'Show', destreza %></td>
-        <td><%= link_to 'Edit', edit_destreza_path(destreza) %></td>
-        <td><%= link_to 'Destroy', destreza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Destreza', new_destreza_path %>
+<div class="jumbotron">
+  <div>
+     <%= link_to new_destreza_path do %>
+        <i class="fa fa-plus-square bigicon"  style="font-size:30px"></i>
+  <% end %>
+     
+       <div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-success"> 
+    <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+    
+    </div>
+   <table class="table table-striped ">
+      <thead>
+           <tr>
+            <th>Nombre</th>
+            <th>Comentario</th>
+           </tr>
+      </thead>
+        <tbody>
+           <% @destrezas.each do |destreza| %>
+          <tr>
+           <td><%= destreza.nombre %></td>
+           <td><%= destreza.comentario %></td>
+        <td> <%= link_to edit_destreza_path(destreza) do %>
+            <i class="fa fa-pencil-square bigicon"  style="font-size:30px"></i>
+              <% end %>
+        </td>
+ 
+      <td>
+        <%= link_to destreza, method: :delete, data: { confirm: 'Esta seguro?' } do %>
+           <i class="fa fa-minus-square bigicon" style="font-size:30px"></i>
+        <% end %>
+           </td>
+           </tr> 
+      
+        <% end %>
+     </tbody>
+   </table>
+ </div>   
+ </div> 
+  </div>  
+</div>  

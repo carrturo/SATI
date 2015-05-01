@@ -28,7 +28,7 @@ class TipoTicketsController < ApplicationController
 
     respond_to do |format|
       if @tipo_ticket.save
-        format.html { redirect_to @tipo_ticket, notice: 'Tipo ticket was successfully created.' }
+        format.html { redirect_to tipo_tickets_path, notice: 'Tipo ticket was successfully created.' }
         format.json { render :show, status: :created, location: @tipo_ticket }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TipoTicketsController < ApplicationController
   def update
     respond_to do |format|
       if @tipo_ticket.update(tipo_ticket_params)
-        format.html { redirect_to @tipo_ticket, notice: 'Tipo ticket was successfully updated.' }
+        format.html { redirect_to tipo_tickets_path, notice: 'Tipo ticket was successfully updated.' }
         format.json { render :show, status: :ok, location: @tipo_ticket }
       else
         format.html { render :edit }

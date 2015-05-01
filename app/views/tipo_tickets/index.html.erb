@@ -1,29 +1,60 @@
-<h1>Listing tipo_tickets</h1>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Tickets</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Tipo de tickets</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tipo</th>
-      <th>Precio</th>
-      <th>Comentario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tipo_tickets.each do |tipo_ticket| %>
-      <tr>
-        <td><%= tipo_ticket.tipo %></td>
-        <td><%= tipo_ticket.precio %></td>
-        <td><%= tipo_ticket.comentario %></td>
-        <td><%= link_to 'Show', tipo_ticket %></td>
-        <td><%= link_to 'Edit', edit_tipo_ticket_path(tipo_ticket) %></td>
-        <td><%= link_to 'Destroy', tipo_ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tipo ticket', new_tipo_ticket_path %>
+<div class="jumbotron">
+  <div>
+    <%= link_to new_tipo_ticket_path do %>
+        <i class="fa fa-plus-square bigicon"  style="font-size:30px"></i>
+  <% end %>
+     <div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-success"> 
+    <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+    
+    </div>
+   <table class="table table-striped ">
+      <thead>
+           <tr>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Comentario</th>
+           </tr>
+      </thead>
+        <tbody>
+         <% @tipo_tickets.each do |tipo_ticket| %>
+         <tr>
+            <td><%= tipo_ticket.tipo %></td>
+            <td><%= tipo_ticket.precio %></td>
+            <td><%= tipo_ticket.comentario %></td>
+            <td><%= link_to edit_tipo_ticket_path(tipo_ticket) do %>
+              <i class="fa fa-pencil-square bigicon"  style="font-size:30px"></i>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to tipo_ticket, method: :delete, data: { confirm: 'Esta seguro?' } do %>
+                      <i class="fa fa-minus-square bigicon" style="font-size:30px"></i>
+              <% end %>
+            </td>
+         </tr> 
+      
+        <% end %>
+     </tbody>
+   </table>
+ </div>   
+ </div>
+    
+  </div>
+</div>  

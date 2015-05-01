@@ -28,7 +28,7 @@ class DestrezasController < ApplicationController
 
     respond_to do |format|
       if @destreza.save
-        format.html { redirect_to @destreza, notice: 'Destreza was successfully created.' }
+        format.html { redirect_to destrezas_path, notice: 'Destreza was successfully created.' }
         format.json { render :show, status: :created, location: @destreza }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DestrezasController < ApplicationController
   def update
     respond_to do |format|
       if @destreza.update(destreza_params)
-        format.html { redirect_to @destreza, notice: 'Destreza was successfully updated.' }
+        format.html { redirect_to destrezas_path, notice: 'Destreza was successfully updated.' }
         format.json { render :show, status: :ok, location: @destreza }
       else
         format.html { render :edit }

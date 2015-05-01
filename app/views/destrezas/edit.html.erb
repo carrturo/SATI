@@ -1,6 +1,21 @@
-<h1>Editing destreza</h1>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Editar destreza</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Destrezas</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
+<div class="Jumbotron">
 <%= render 'form' %>
+</div>
 
-<%= link_to 'Show', @destreza %> |
-<%= link_to 'Back', destrezas_path %>

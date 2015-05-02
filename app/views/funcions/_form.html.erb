@@ -3,7 +3,7 @@
 <fieldset>  
   <% if @funcion.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@funcion.errors.count, "error") %> prohibited this funcion from being saved:</h2>
+      <h2>Error al guardar Función</h2>
 
       <ul>
       <% @funcion.errors.full_messages.each do |message| %>

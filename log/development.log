@@ -40681,3 +40681,777 @@ Processing by FuncionsController#edit as HTML
   Rendered funcions/_form.html.erb (3.2ms)
   Rendered funcions/edit.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 1015ms (Views: 1012.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 186.2.144.68 at 2015-05-01 23:46:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 2530ms (Views: 2508.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:33 +0000
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:34 +0000
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:34 +0000
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:34 +0000
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:34 +0000
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:34 +0000
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:35 +0000
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:35 +0000
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:35 +0000
+
+
+Started GET "/assets/destrezas.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:36 +0000
+
+
+Started GET "/assets/funcions.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:36 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:36 +0000
+
+
+Started GET "/assets/home.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:37 +0000
+
+
+Started GET "/assets/tipo_tickets.css?body=1" for 186.2.144.68 at 2015-05-01 23:46:38 +0000
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:39 +0000
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:40 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:40 +0000
+
+
+Started GET "/assets/destrezas.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:41 +0000
+
+
+Started GET "/assets/funcions.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:42 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:43 +0000
+
+
+Started GET "/assets/telon.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:57 +0000
+
+
+Started GET "/assets/tipo_tickets.js?body=1" for 186.2.144.68 at 2015-05-01 23:46:58 +0000
+
+
+Started GET "/assets/p2.png" for 186.2.144.68 at 2015-05-01 23:46:58 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 186.2.144.68 at 2015-05-01 23:47:00 +0000
+
+
+Started GET "/assets/frontcurtain.jpg" for 186.2.144.68 at 2015-05-01 23:47:00 +0000
+
+
+Started GET "/assets/rope1.png" for 186.2.144.68 at 2015-05-01 23:47:00 +0000
+
+
+Started GET "/assets/C1.png" for 186.2.144.68 at 2015-05-01 23:47:01 +0000
+
+
+Started GET "/assets/logom.png" for 186.2.144.68 at 2015-05-01 23:47:02 +0000
+
+
+Started GET "/assets/arrow1.png" for 186.2.144.68 at 2015-05-01 23:47:02 +0000
+
+
+Started GET "/assets/C2.png" for 186.2.144.68 at 2015-05-01 23:47:02 +0000
+
+
+Started GET "/assets/C3.png" for 186.2.144.68 at 2015-05-01 23:47:02 +0000
+
+
+Started GET "/" for 186.2.144.68 at 2015-05-02 01:09:37 +0000
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.1.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.0) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.0) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.1ms)
+
+
+Started GET "/" for 186.2.144.68 at 2015-05-02 01:10:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (13.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 2621ms (Views: 2599.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/menu.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/button.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:08 +0000
+
+
+Started GET "/assets/jquery-ui/resizable.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/dialog.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/progressbar.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/selectmenu.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/slider.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/spinner.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:09 +0000
+
+
+Started GET "/assets/jquery-ui/tabs.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/clasificacions.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/destrezas.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/funcions.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/home.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/main.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/tipo_tickets.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:10 +0000
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/accordion.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/button.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/draggable.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/resizable.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/dialog.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/droppable.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect-bounce.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect-clip.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect-drop.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect-explode.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:11 +0000
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-fold.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-highlight.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-size.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-scale.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-puff.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-shake.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-slide.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/effect-transfer.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/progressbar.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/selectable.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/selectmenu.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/slider.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/spinner.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/tabs.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui/tooltip.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:12 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/destrezas.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/funcions.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/smoothscroll.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/telon.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/tipo_tickets.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/frontcurtain.jpg" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/letras.png" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/rope1.png" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/logom.png" for 186.2.144.68 at 2015-05-02 01:10:13 +0000
+
+
+Started GET "/assets/arrow1.png" for 186.2.144.68 at 2015-05-02 01:10:14 +0000
+
+
+Started GET "/assets/C1.png" for 186.2.144.68 at 2015-05-02 01:10:14 +0000
+
+
+Started GET "/assets/images/darkcurtain.jpg" for 186.2.144.68 at 2015-05-02 01:10:14 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/darkcurtain.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/action/.parts/packages/ruby2.1/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /home/action/.gem/ruby/2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.7ms)
+
+
+Started GET "/assets/C2.png" for 186.2.144.68 at 2015-05-02 01:10:14 +0000
+
+
+Started GET "/assets/C3.png" for 186.2.144.68 at 2015-05-02 01:10:14 +0000
+
+
+Started GET "/" for 186.2.144.68 at 2015-05-02 01:16:01 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 904ms (Views: 903.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:02 +0000
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:02 +0000
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:02 +0000
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:02 +0000
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:02 +0000
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/destrezas.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/funcions.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/home.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/tipo_tickets.css?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/destrezas.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/funcions.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/telon.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:03 +0000
+
+
+Started GET "/assets/tipo_tickets.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/frontcurtain.jpg" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/arrow1.png" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/logom.png" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/C1.png" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/letras1.png" for 186.2.144.68 at 2015-05-02 01:16:04 +0000
+
+
+Started GET "/assets/rope1.png" for 186.2.144.68 at 2015-05-02 01:16:05 +0000
+
+
+Started GET "/assets/C2.png" for 186.2.144.68 at 2015-05-02 01:16:05 +0000
+
+
+Started GET "/assets/C3.png" for 186.2.144.68 at 2015-05-02 01:16:05 +0000
+
+
+Started GET "/" for 186.2.144.68 at 2015-05-02 01:19:17 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 698ms (Views: 697.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:18 +0000
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/destrezas.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/funcions.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/home.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/tipo_tickets.css?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/destrezas.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/funcions.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/telon.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/tipo_tickets.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 186.2.144.68 at 2015-05-02 01:19:19 +0000
+
+
+Started GET "/assets/frontcurtain.jpg" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/letras.png" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/logom.png" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/arrow1.png" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/C1.png" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/rope1.png" for 186.2.144.68 at 2015-05-02 01:19:20 +0000
+
+
+Started GET "/assets/C2.png" for 186.2.144.68 at 2015-05-02 01:19:21 +0000
+
+
+Started GET "/assets/C3.png" for 186.2.144.68 at 2015-05-02 01:19:21 +0000
+
+
+Started GET "/" for 186.2.144.68 at 2015-05-02 01:20:55 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 679ms (Views: 678.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/accordion.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:57 +0000
+
+
+Started GET "/assets/jquery-ui/autocomplete.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:57 +0000
+
+
+Started GET "/assets/jquery-ui/draggable.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:57 +0000
+
+
+Started GET "/assets/jquery-ui/selectable.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:57 +0000
+
+
+Started GET "/assets/jquery-ui/sortable.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:57 +0000
+
+
+Started GET "/assets/jquery-ui/tooltip.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:57 +0000
+
+
+Started GET "/assets/jquery-ui/base.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:58 +0000
+
+
+Started GET "/assets/jquery-ui/all.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:58 +0000
+
+
+Started GET "/assets/jquery-ui.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:58 +0000
+
+
+Started GET "/assets/destrezas.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:58 +0000
+
+
+Started GET "/assets/funcions.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:58 +0000
+
+
+Started GET "/assets/generos.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:58 +0000
+
+
+Started GET "/assets/home.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:59 +0000
+
+
+Started GET "/assets/tipo_tickets.css?body=1" for 186.2.144.68 at 2015-05-02 01:20:59 +0000
+
+
+Started GET "/assets/jquery-ui/effect-fade.js?body=1" for 186.2.144.68 at 2015-05-02 01:20:59 +0000
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 186.2.144.68 at 2015-05-02 01:20:59 +0000
+
+
+Started GET "/assets/clasificacions.js?body=1" for 186.2.144.68 at 2015-05-02 01:20:59 +0000
+
+
+Started GET "/assets/destrezas.js?body=1" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/funcions.js?body=1" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/generos.js?body=1" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/telon.js?body=1" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/tipo_tickets.js?body=1" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/frontcurtain.jpg" for 186.2.144.68 at 2015-05-02 01:21:00 +0000
+
+
+Started GET "/assets/letras.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/arrow1.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/logom.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/C1.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/logoArtMemola.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/rope1.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/C2.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000
+
+
+Started GET "/assets/C3.png" for 186.2.144.68 at 2015-05-02 01:21:02 +0000

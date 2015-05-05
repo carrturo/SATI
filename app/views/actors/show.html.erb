@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @actor.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @actor.gender %>
+</p>
+
+<p>
+  <strong>Identity:</strong>
+  <%= @actor.identity %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @actor.email %>
+</p>
+
+<p>
+  <strong>Facebook profile:</strong>
+  <%= @actor.facebook_profile %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @actor.biography %>
+</p>
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429015832) do
+ActiveRecord::Schema.define(version: 20150505222713) do
+
+  create_table "actors", force: true do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.string   "identity"
+    t.string   "email"
+    t.string   "facebook_profile"
+    t.text     "biography"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "actors_destrezas", force: true do |t|
+    t.integer "actor_id"
+    t.integer "destreza_id"
+  end
+
+  create_table "actors_plays", force: true do |t|
+    t.integer "actor_id"
+    t.integer "play_id"
+  end
 
   create_table "clasificacions", force: true do |t|
     t.string   "nombre"
@@ -20,6 +41,11 @@ ActiveRecord::Schema.define(version: 20150429015832) do
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "clasificacions_plays", force: true do |t|
+    t.integer "clasificacion_id"
+    t.integer "play_id"
   end
 
   create_table "destrezas", force: true do |t|
@@ -36,9 +62,29 @@ ActiveRecord::Schema.define(version: 20150429015832) do
     t.datetime "updated_at"
   end
 
+  create_table "funcions_plays", force: true do |t|
+    t.integer "funcion_id"
+    t.integer "play_id"
+  end
+
   create_table "generos", force: true do |t|
     t.string   "nombre"
     t.string   "comentario"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "generos_plays", force: true do |t|
+    t.integer "genero_id"
+    t.integer "play_id"
+  end
+
+  create_table "plays", force: true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.string   "promotional_video"
+    t.integer  "duration"
+    t.date     "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

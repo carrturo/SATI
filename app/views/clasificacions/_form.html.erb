@@ -4,7 +4,7 @@
 <fieldset>
   <% if @clasificacion.errors.any? %>
     <div id="error_explanation" style="align:center">
-      <h2><%= @clasificacion.errors.count %> error(es) al guardar el género por la siguiente(s) razón(es):</h2>
+      <h2>Error al guardar Clasificación</h2>
 
       <ul>
       <% @clasificacion.errors.full_messages.each do |message| %>

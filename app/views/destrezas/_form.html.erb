@@ -3,7 +3,7 @@
 <fieldset>  
  <% if @destreza.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@destreza.errors.count, "error") %> prohibited this destreza from being saved:</h2>
+      <h2>Error al guardar Destreza</h2>
 
       <ul>
       <% @destreza.errors.full_messages.each do |message| %>

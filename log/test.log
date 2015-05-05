@@ -2415,3 +2415,174 @@ Started GET "/assets/C1.png" for 200.107.209.2 at 2015-04-28 01:16:43 +0000
 Started GET "/assets/C2.png" for 200.107.209.2 at 2015-04-28 01:16:43 +0000
 Started GET "/assets/C3.png" for 200.107.209.2 at 2015-04-28 01:16:43 +0000
 Started GET "/assets/arrow1.png" for 200.107.209.2 at 2015-04-28 01:16:43 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:56:25 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 11644ms (Views: 11621.3ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:56:37 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:56:37 +0000
+Started GET "/assets/logoArtMemola.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/frontcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/logom.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/p2.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/arrow1.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/rope1.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:56:38 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:57:41 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:57:41 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:57:42 +0000
+Started GET "/assets/rope1.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/logoArtMemola.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/p2.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/frontcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/logom.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/arrow1.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:57:43 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:57:45 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:57:45 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:57:45 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:57:45 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:57:46 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:58:49 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:58:49 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:58:49 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:58:54 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:58:54 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:58:54 +0000
+Started GET "/assets/logoArtMemola.png" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/logom.png" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/rope1.png" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/frontcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/p2.png" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/arrow1.png" for 190.92.79.128 at 2015-05-03 18:58:55 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:58:56 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:58:56 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:58:59 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:58:59 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:58:59 +0000
+Started GET "/assets/frontcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/logoArtMemola.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/p2.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/logom.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/rope1.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/arrow1.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:59:02 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:59:04 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:59:05 +0000
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:59:05 +0000
+Started GET "/assets/logom.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/logoArtMemola.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/frontcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/p2.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/rope1.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/arrow1.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:59:09 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:59:10 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:59:10 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:59:10 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:59:10 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:59:15 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:59:16 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:59:16 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 18:59:21 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css" for 190.92.79.128 at 2015-05-03 18:59:21 +0000
+Started GET "/assets/application.js" for 190.92.79.128 at 2015-05-03 18:59:22 +0000
+Started GET "/assets/logoArtMemola.png" for 190.92.79.128 at 2015-05-03 18:59:27 +0000
+Started GET "/assets/rope1.png" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/frontcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/arrow1.png" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/logom.png" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/p2.png" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/C1.png" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/C2.png" for 190.92.79.128 at 2015-05-03 18:59:28 +0000
+Started GET "/assets/C3.png" for 190.92.79.128 at 2015-05-03 18:59:29 +0000
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 18:59:29 +0000
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:03:56 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (96.9ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (103.3ms)
+Completed 500 Internal Server Error in 153ms
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:03:56 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.7ms)[0m  SELECT `generos`.* FROM `generos`
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:04:08 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.6ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 3ms
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 19:04:16 +0000
+Started GET "/" for 190.92.79.128 at 2015-05-03 19:04:18 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 19:04:18 +0000
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:04:21 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.6ms)[0m  SELECT `generos`.* FROM `generos`
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 3ms
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:04:21 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.6ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 3ms
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:05:06 +0000
+Processing by GenerosController#index as HTML
+  [1m[36mGenero Load (0.7ms)[0m  [1mSELECT `generos`.* FROM `generos`[0m
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 66ms
+Started GET "/generos" for 190.92.79.128 at 2015-05-03 19:05:09 +0000
+Processing by GenerosController#index as HTML
+  [1m[35mGenero Load (0.6ms)[0m  SELECT `generos`.* FROM `generos`
+Mysql2::Error: Table 'SATI_test.generos' doesn't exist: SELECT `generos`.* FROM `generos`
+  Rendered generos/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 3ms
+Started GET "/assets/images/darkcurtain.jpg" for 190.92.79.128 at 2015-05-03 19:05:10 +0000

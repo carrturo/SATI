@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @play.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @play.summary %>
+</p>
+
+<p>
+  <strong>Promotional video:</strong>
+  <%= @play.promotional_video %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @play.duration %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @play.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_play_path(@play) %> |
+<%= link_to 'Back', plays_path %>

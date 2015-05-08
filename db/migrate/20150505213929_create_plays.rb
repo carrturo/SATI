@@ -6,7 +6,8 @@ class CreatePlays < ActiveRecord::Migration
       t.string :promotional_video
       t.integer :duration
       t.date :end_date
-
+      t.string :state
+      
       t.timestamps
     end
   end

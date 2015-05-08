@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150505222713) do
     t.string   "email"
     t.string   "facebook_profile"
     t.text     "biography"
+    t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -85,6 +86,7 @@ ActiveRecord::Schema.define(version: 20150505222713) do
     t.string   "promotional_video"
     t.integer  "duration"
     t.date     "end_date"
+    t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

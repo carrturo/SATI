@@ -15,16 +15,38 @@ class PlaysController < ApplicationController
   # GET /plays/new
   def new
     @play = Play.new
+    # PONER SOLAMENTE LOS ACTIVOS
+    @actors = Actor.where(state: "Activo")
+    @generos= Genero.all
+    @funcions= Funcion.all
+    @clasificacions= Clasificacion.all
   end
 
   # GET /plays/1/edit
   def edit
+     @actors = Actor.where(state: "Activo")
+    @generos= Genero.all
+    @funcions= Funcion.all
+    @clasificacions= Clasificacion.all
   end
 
   # POST /plays
   # POST /plays.json
   def create
     @play = Play.new(play_params)
+    params[:actors].each do |actor|
+      @play.actors << Actor.find_by_id(actor[0])
+      
+    end 
+      params[:generos].each do |genero|
+        @play.generos << Genero.find_by_id(genero[0])
+      end
+      params[:funcions].each do |funcion|
+        @play.funcions << Funcion.find_by_id(funcion[0])
+      end 
+      params[:clasificacions].each do |clasificacion|
+        @play.clasificacions << Clasificacion.find_by_id(clasificacion[0])  
+      end
 
     respond_to do |format|
       if @play.save
@@ -40,6 +62,19 @@ class PlaysController < ApplicationController
   # PATCH/PUT /plays/1
   # PATCH/PUT /plays/1.json
   def update
+     params[:actors].each do |actor|
+      @play.actors << Actor.find_by_id(actor[0])
+      
+    end 
+      params[:generos].each do |genero|
+        @play.generos << Genero.find_by_id(genero[0])
+      end
+      params[:funcions].each do |funcion|
+        @play.funcions << Funcion.find_by_id(funcion[0])
+      end 
+      params[:clasificacions].each do |clasificacion|
+        @play.clasificacions << Clasificacion.find_by_id(clasificacion[0])  
+      end
     respond_to do |format|
       if @play.update(play_params)
         format.html { redirect_to @play, notice: 'Play was successfully updated.' }
@@ -69,6 +104,9 @@ class PlaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def play_params
-      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date)
+      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state)
     end
 end
+
+
+

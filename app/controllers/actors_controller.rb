@@ -15,17 +15,23 @@ class ActorsController < ApplicationController
   # GET /actors/new
   def new
     @actor = Actor.new
+    @destrezas= Destreza.all
   end
 
   # GET /actors/1/edit
   def edit
+    @destrezas= Destreza.all
   end
 
   # POST /actors
   # POST /actors.json
   def create
     @actor = Actor.new(actor_params)
-
+      
+    params[:destrezas].each do |destreza|
+      @actor.destrezas << Destreza.find_by_id(destreza[0])
+    end 
+    
     respond_to do |format|
       if @actor.save
         format.html { redirect_to @actor, notice: 'Actor was successfully created.' }
@@ -40,6 +46,10 @@ class ActorsController < ApplicationController
   # PATCH/PUT /actors/1
   # PATCH/PUT /actors/1.json
   def update
+    
+     params[:destrezas].each do |destreza|
+      @actor.destrezas << Destreza.find_by_id(destreza[0])
+    end 
     respond_to do |format|
       if @actor.update(actor_params)
         format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
@@ -69,6 +79,6 @@ class ActorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def actor_params
-      params.require(:actor).permit(:name, :gender, :identity, :email, :facebook_profile, :biography)
+      params.require(:actor).permit(:name, :gender, :identity, :email, :facebook_profile, :biography, :state)
     end
 end

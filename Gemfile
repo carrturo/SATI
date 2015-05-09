@@ -5,8 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 # Use mysql as the database for Active Record
 gem 'mysql2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+
+gem 'date_validator'
+
 gem 'material_design_icons_rails', '~> 1.0.0'
 gem 'font-awesome-sass', '~> 4.3.0'
 # Use Uglifier as compressor for JavaScript assets

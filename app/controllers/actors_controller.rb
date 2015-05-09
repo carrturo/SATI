@@ -27,7 +27,8 @@ class ActorsController < ApplicationController
   # POST /actors.json
   def create
     @actor = Actor.new(actor_params)
-      
+    @destrezas= Destreza.all
+    
     params[:destrezas].each do |destreza|
       @actor.destrezas << Destreza.find_by_id(destreza[0])
     end 

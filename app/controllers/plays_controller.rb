@@ -34,6 +34,12 @@ class PlaysController < ApplicationController
   # POST /plays.json
   def create
     @play = Play.new(play_params)
+    
+    @actors = Actor.where(state: "Activo")
+    @generos= Genero.all
+    @funcions= Funcion.all
+    @clasificacions= Clasificacion.all
+    
     params[:actors].each do |actor|
       @play.actors << Actor.find_by_id(actor[0])
       

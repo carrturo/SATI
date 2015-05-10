@@ -19,7 +19,7 @@ class PlaysController < ApplicationController
     @actors = Actor.where(state: "Activo")
     @generos= Genero.all
     @funcions= Funcion.all
-    @clasificacions= Clasificacion.all
+   
   end
 
   # GET /plays/1/edit
@@ -27,7 +27,7 @@ class PlaysController < ApplicationController
      @actors = Actor.where(state: "Activo")
     @generos= Genero.all
     @funcions= Funcion.all
-    @clasificacions= Clasificacion.all
+   
   end
 
   # POST /plays
@@ -38,7 +38,7 @@ class PlaysController < ApplicationController
     @actors = Actor.where(state: "Activo")
     @generos= Genero.all
     @funcions= Funcion.all
-    @clasificacions= Clasificacion.all
+   
     
     params[:actors].each do |actor|
       @play.actors << Actor.find_by_id(actor[0])
@@ -50,9 +50,7 @@ class PlaysController < ApplicationController
       params[:funcions].each do |funcion|
         @play.funcions << Funcion.find_by_id(funcion[0])
       end 
-      params[:clasificacions].each do |clasificacion|
-        @play.clasificacions << Clasificacion.find_by_id(clasificacion[0])  
-      end
+    
 
     respond_to do |format|
       if @play.save
@@ -68,6 +66,21 @@ class PlaysController < ApplicationController
   # PATCH/PUT /plays/1
   # PATCH/PUT /plays/1.json
   def update
+     @actors = Actor.where(state: "Activo")
+     @generos= Genero.all
+     @funcions= Funcion.all
+   
+      @actors.each do |actor|
+        @play.actors.delete(actor)
+      end 
+     
+    @generos.each do |genero|
+      @play.generos.delete(genero)
+      end 
+     @funcions.each do |funcion|
+        @play.funcions.delete(funcion)
+      end 
+    
      params[:actors].each do |actor|
       @play.actors << Actor.find_by_id(actor[0])
       
@@ -78,9 +91,7 @@ class PlaysController < ApplicationController
       params[:funcions].each do |funcion|
         @play.funcions << Funcion.find_by_id(funcion[0])
       end 
-      params[:clasificacions].each do |clasificacion|
-        @play.clasificacions << Clasificacion.find_by_id(clasificacion[0])  
-      end
+     
     respond_to do |format|
       if @play.update(play_params)
         format.html { redirect_to @play, notice: 'Play was successfully updated.' }
@@ -110,7 +121,7 @@ class PlaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def play_params
-      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state)
+      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state, :clasificacion_id)
     end
 end
 

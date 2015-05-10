@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20150505222713) do
     t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "clasificacion_id"
   end
 
   create_table "tipo_tickets", force: true do |t|

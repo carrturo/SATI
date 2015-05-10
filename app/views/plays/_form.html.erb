@@ -67,7 +67,13 @@
                        <tr>
                          <td><%= actor.identity %></td>
                          <td><%= actor.name %></td>
-                         <td><%= check_box_tag "actors[#{actor.id}]", actor.id  %></td>
+                           <% @actor= @play.actors.find_by_id(actor.id) %>
+                          <% if @actor== nil %>
+                            <td><%= check_box_tag "actors[#{actor.id}]", actor.id  %></td>
+                          <% else %>
+                            <td><%= check_box_tag "actors[#{actor.id}]", actor.id , {checked: true} %></td>
+                          <% end %>
+                        
                        </tr>  
                       <% end %>  
                   </tbody>  
@@ -94,7 +100,13 @@
                     <% @generos.each do |genero| %>
                        <tr>
                          <td><%= genero.nombre %></td>
-                         <td><%= check_box_tag "generos[#{genero.id}]", genero.id  %></td>
+                         <% @genero= @play.generos.find_by_id(genero.id) %>
+                         <% if @genero== nil %>
+                             <td><%= check_box_tag "generos[#{genero.id}]", genero.id  %></td>
+                          <% else %>
+                             <td><%= check_box_tag "generos[#{genero.id}]", genero.id,{checked: true}  %></td>
+                          <% end %>
+                         
                        </tr>  
                       <% end %>  
                   </tbody>  
@@ -121,7 +133,15 @@
                     <% @funcions.each do |funcion| %>
                        <tr>
                          <td><%= funcion.hora %></td>
-                         <td><%= check_box_tag "funcions[#{funcion.id}]", funcion.id  %></td>
+                            <% @funcion= @play.funcions.find_by_id(funcion.id) %>
+                         <% if @funcion== nil %>
+                           <td><%= check_box_tag "funcions[#{funcion.id}]", funcion.id  %></td>
+                          <% else %>
+                          <td><%= check_box_tag "funcions[#{funcion.id}]", funcion.id, {checked: true}  %></td>
+                          
+                          <% end %>
+                        
+                         
                        </tr>  
                       <% end %>  
                   </tbody>  
@@ -136,27 +156,7 @@
   <div class="form-group">
        <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-tasks bigicon"></i><br>Clasificacion*</span>
            <div class="col-md-8" style="width: 500px;">
-             <div class="panel panel-success"> 
-               <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
-                </div>
-                <table class="table table-striped " >
-                   <thead>
-                        <tr>
-                          <th>Nombre</th>
-                        </tr>
-                   </thead>
-                  <tbody>
-                    <% @clasificacions.each do |clasificacion| %>
-                       <tr>
-                         <td><%= clasificacion.nombre %></td>
-                         <td><%= check_box_tag "clasificacions[#{clasificacion.id}]", clasificacion.id  %></td>
-                       </tr>  
-                      <% end %>  
-                  </tbody>  
-               
-               </table>  
-             </div>  
-             
+             <%= f.collection_select(:clasificacion_id, Clasificacion.all, :id, :nombre) %>
            </div>
    </div>
   

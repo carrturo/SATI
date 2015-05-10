@@ -70,7 +70,13 @@
                     <% @destrezas.each do |destreza| %>
                        <tr>
                          <td><%= destreza.nombre %></td>
-                         <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id %></td>
+                        
+                         <% @destreza= @actor.destrezas.find_by_id(destreza.id) %>
+                        <% if @destreza== nil %>
+                          <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id %></td>
+                        <% else %>
+                          <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id, {checked: true} %></td>
+                          <% end %>
                        </tr>  
                       <% end %>  
                   </tbody>  

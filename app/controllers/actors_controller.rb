@@ -47,6 +47,11 @@ class ActorsController < ApplicationController
   # PATCH/PUT /actors/1
   # PATCH/PUT /actors/1.json
   def update
+     @destrezas= Destreza.all
+     
+    @destrezas.each do |destreza|
+      @actor.destrezas.delete(destreza)
+      end 
     
      params[:destrezas].each do |destreza|
       @actor.destrezas << Destreza.find_by_id(destreza[0])

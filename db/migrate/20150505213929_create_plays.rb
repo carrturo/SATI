@@ -9,6 +9,7 @@ class CreatePlays < ActiveRecord::Migration
       t.string :state
       
       t.timestamps
+      t.belongs_to :clasificacion
     end
   end
 end

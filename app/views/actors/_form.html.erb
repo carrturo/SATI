@@ -3,7 +3,7 @@
  <fieldset> 
  <% if @actor.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@actor.errors.count, "error") %> prohibited this actor from being saved:</h2>
+      <h2>Error al guardar Actor</h2>
 
       <ul>
       <% @actor.errors.full_messages.each do |message| %>
@@ -73,9 +73,9 @@
                         
                          <% @destreza= @actor.destrezas.find_by_id(destreza.id) %>
                         <% if @destreza== nil %>
-                          <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id %></td>
+                          <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id, false, class: 'destrezas_actor' %></td>
                         <% else %>
-                          <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id, {checked: true} %></td>
+                          <td><%= check_box_tag "destrezas[#{destreza.id}]", destreza.id, true, class: 'destrezas_actor' %></td>
                           <% end %>
                        </tr>  
                       <% end %>  

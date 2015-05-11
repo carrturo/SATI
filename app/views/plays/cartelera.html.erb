@@ -16,7 +16,8 @@
 </section>
 <br><br>
 
-<div class="row">
+<% @plays.each do |play|%>
+  <div class="row">
   <div class="col-md-10 col-md-offset-1">
   <div class="col-md-7">
     <a href="#">
@@ -25,11 +26,16 @@
   </div>
   
   <div class="col-md-5">
-    <h3>Nombre de la obra</h3>
+    <h3><%= play.title %></h3>
     <br>
-    <p style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+    <p style="text-align:justify"><%= play.summary %></p>
     <br>
-    <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+    <%= play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %>
+    <br><br>
+   <a class="btn btn-success" href="#">Ver Obra <span class="glyphicon glyphicon-chevron-right"></span></a>
   </div>  
  </div>   
 </div>
+<hr>
+<br>
+<% end %>

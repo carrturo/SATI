@@ -134,7 +134,7 @@ class PlaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def play_params
-      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state, :clasificacion_id)
+      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state, :clasificacion_id, :picture_cache, :picture)
     end
 end
 

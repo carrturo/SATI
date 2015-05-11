@@ -63,6 +63,9 @@ class PlaysController < ApplicationController
     end
   end
 
+  def cartelera
+    @plays = Play.where(state: "Exhibicion")
+  end  
   # PATCH/PUT /plays/1
   # PATCH/PUT /plays/1.json
   def update

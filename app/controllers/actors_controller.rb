@@ -29,6 +29,12 @@ class ActorsController < ApplicationController
     @actor = Actor.new(actor_params)
     @destrezas= Destreza.all
     
+    if params[:picture].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:picture])
+        logger.debug("VALIDOOOOOOOOO #{preloaded.valid?}")
+        @project.picture = preloaded.identifier.to_s
+    end
+    
     params[:destrezas].each do |destreza|
       @actor.destrezas << Destreza.find_by_id(destreza[0])
     end 

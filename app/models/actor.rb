@@ -7,4 +7,5 @@ class Actor < ActiveRecord::Base
   validates_format_of :name, :with => /[a-zA-Z\s(ñ)]+/, :message => "solo acepta letras."
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/, :message => "no es válido."
   validates_format_of :identity, :with => /\d{4}-\d{4}-\d{5}/, :message => "no válido. Formato: XXXX-XXXX-XXXXX"
+  mount_uploader :picture, PictureUploader
 end

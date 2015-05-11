@@ -9,6 +9,10 @@ gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
+gem 'carrierwave'
+
+gem 'cloudinary'
+
 gem 'date_validator'
 
 gem 'material_design_icons_rails', '~> 1.0.0'

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: diskiwlwj
+  api_key: '959294971297416'
+  api_secret: LQtBZ54wx5gzSxG7l5XUz5qRS7Y
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: diskiwlwj
+  api_key: '959294971297416'
+  api_secret: LQtBZ54wx5gzSxG7l5XUz5qRS7Y
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: diskiwlwj
+  api_key: '959294971297416'
+  api_secret: LQtBZ54wx5gzSxG7l5XUz5qRS7Y
+  enhance_image_tag: true
+  static_image_support: false

@@ -8,7 +8,7 @@ class CreateActors < ActiveRecord::Migration
       t.string :facebook_profile
       t.text :biography
       t.string :state
-
+      
       t.timestamps
     end
   end

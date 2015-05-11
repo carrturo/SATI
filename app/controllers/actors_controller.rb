@@ -21,6 +21,13 @@ class ActorsController < ApplicationController
   # GET /actors/1/edit
   def edit
     @destrezas= Destreza.all
+    
+    if params[:picture].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:picture])
+        logger.debug("VALIDOOOOOOOOO #{preloaded.valid?}")
+        @project.picture = preloaded.identifier.to_s
+    end
+    
   end
 
   # POST /actors

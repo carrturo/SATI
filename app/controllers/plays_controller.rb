@@ -24,10 +24,15 @@ class PlaysController < ApplicationController
 
   # GET /plays/1/edit
   def edit
-     @actors = Actor.where(state: "Activo")
+    @actors = Actor.where(state: "Activo")
     @generos= Genero.all
     @funcions= Funcion.all
    
+    if params[:picture].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:picture])
+        logger.debug("VALIDOOOOOOOOO #{preloaded.valid?}")
+        @project.picture = preloaded.identifier.to_s
+    end
   end
 
   # POST /plays
@@ -39,6 +44,11 @@ class PlaysController < ApplicationController
     @generos= Genero.all
     @funcions= Funcion.all
    
+    if params[:picture].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:picture])
+        logger.debug("VALIDOOOOOOOOO #{preloaded.valid?}")
+        @project.picture = preloaded.identifier.to_s
+    end
     
     params[:actors].each do |actor|
       @play.actors << Actor.find_by_id(actor[0])

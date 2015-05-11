@@ -1,0 +1,41 @@
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Cartelera</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Obras</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+<br><br>
+
+<% @plays.each do |play|%>
+  <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+  <div class="col-md-7">
+    <a href="#">
+      <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+   </a>
+  </div>
+  
+  <div class="col-md-5">
+    <h3><%= play.title %></h3>
+    <br>
+    <p style="text-align:justify"><%= play.summary %></p>
+    <br>
+    <%= play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %>
+    <br><br>
+   <a class="btn btn-success" href="#">Ver Obra <span class="glyphicon glyphicon-chevron-right"></span></a>
+  </div>  
+ </div>   
+</div>
+<hr>
+<br>
+<% end %>

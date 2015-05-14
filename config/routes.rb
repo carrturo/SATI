@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :theaters
+
   resources :plays
 
   resources :actors

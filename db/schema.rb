@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511205128) do
+ActiveRecord::Schema.define(version: 20150514044356) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150511205128) do
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
   create_table "clasificacions_plays", force: true do |t|
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 20150511205128) do
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
   create_table "funcions", force: true do |t|
@@ -62,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150511205128) do
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
   create_table "funcions_plays", force: true do |t|
@@ -74,6 +77,7 @@ ActiveRecord::Schema.define(version: 20150511205128) do
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
   create_table "generos_plays", force: true do |t|
@@ -94,12 +98,21 @@ ActiveRecord::Schema.define(version: 20150511205128) do
     t.string   "picture"
   end
 
+  create_table "theaters", force: true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.integer  "capacity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tipo_tickets", force: true do |t|
     t.string   "tipo"
     t.float    "precio"
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514044356) do
+ActiveRecord::Schema.define(version: 20150515204745) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20150514044356) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "clasificacion_id"
+    t.integer  "theater_id"
     t.string   "picture"
   end
 
@@ -104,6 +105,7 @@ ActiveRecord::Schema.define(version: 20150514044356) do
     t.integer  "capacity"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
   end
 
   create_table "tipo_tickets", force: true do |t|

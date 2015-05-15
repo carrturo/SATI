@@ -10,6 +10,7 @@ class CreatePlays < ActiveRecord::Migration
       
       t.timestamps
       t.belongs_to :clasificacion
+      t.belongs_to :theater
     end
   end
 end

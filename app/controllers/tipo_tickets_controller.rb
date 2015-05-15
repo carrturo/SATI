@@ -69,6 +69,6 @@ class TipoTicketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tipo_ticket_params
-      params.require(:tipo_ticket).permit(:tipo, :precio, :comentario)
+      params.require(:tipo_ticket).permit(:tipo, :precio, :comentario, :state)
     end
 end

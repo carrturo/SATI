@@ -15,12 +15,12 @@ class ActorsController < ApplicationController
   # GET /actors/new
   def new
     @actor = Actor.new
-    @destrezas= Destreza.all
+    @destrezas= Destreza.where(state: "Activo")
   end
 
   # GET /actors/1/edit
   def edit
-    @destrezas= Destreza.all
+    @destrezas= Destreza.where(state: "Activo")
     
     if params[:picture].present?
         preloaded = Cloudinary::PreloadedFile.new(params[:picture])
@@ -34,7 +34,7 @@ class ActorsController < ApplicationController
   # POST /actors.json
   def create
     @actor = Actor.new(actor_params)
-    @destrezas= Destreza.all
+    @destrezas= Destreza.where(state: "Activo")
     
     if params[:picture].present?
         preloaded = Cloudinary::PreloadedFile.new(params[:picture])
@@ -60,7 +60,7 @@ class ActorsController < ApplicationController
   # PATCH/PUT /actors/1
   # PATCH/PUT /actors/1.json
   def update
-     @destrezas= Destreza.all
+     @destrezas= Destreza.where(state: "Activo")
      
     @destrezas.each do |destreza|
       @actor.destrezas.delete(destreza)

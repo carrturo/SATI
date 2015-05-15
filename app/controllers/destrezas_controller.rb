@@ -69,6 +69,6 @@ class DestrezasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def destreza_params
-      params.require(:destreza).permit(:nombre, :comentario)
+      params.require(:destreza).permit(:nombre, :comentario, :state)
     end
 end

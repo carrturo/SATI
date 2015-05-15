@@ -17,16 +17,15 @@ class PlaysController < ApplicationController
     @play = Play.new
     # PONER SOLAMENTE LOS ACTIVOS
     @actors = Actor.where(state: "Activo")
-    @generos= Genero.all
-    @funcions= Funcion.all
-   
+    @generos= Genero.where(state: "Activo")
+    @funcions= Funcion.where(state: "Activo")
   end
 
   # GET /plays/1/edit
   def edit
     @actors = Actor.where(state: "Activo")
-    @generos= Genero.all
-    @funcions= Funcion.all
+    @generos= Genero.where(state: "Activo")
+    @funcions= Funcion.where(state: "Activo")
    
     if params[:picture].present?
         preloaded = Cloudinary::PreloadedFile.new(params[:picture])
@@ -39,10 +38,9 @@ class PlaysController < ApplicationController
   # POST /plays.json
   def create
     @play = Play.new(play_params)
-    
     @actors = Actor.where(state: "Activo")
-    @generos= Genero.all
-    @funcions= Funcion.all
+    @generos= Genero.where(state: "Activo")
+    @funcions= Funcion.where(state: "Activo")
    
     if params[:picture].present?
         preloaded = Cloudinary::PreloadedFile.new(params[:picture])
@@ -80,12 +78,12 @@ class PlaysController < ApplicationController
   # PATCH/PUT /plays/1.json
   def update
      @actors = Actor.where(state: "Activo")
-     @generos= Genero.all
-     @funcions= Funcion.all
-   
-      @actors.each do |actor|
-        @play.actors.delete(actor)
-      end 
+     @generos= Genero.where(state: "Activo")
+     @funcions= Funcion.where(state: "Activo")
+     
+     @actors.each do |actor|
+       @play.actors.delete(actor)
+     end 
      
     @generos.each do |genero|
       @play.generos.delete(genero)
@@ -134,7 +132,7 @@ class PlaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def play_params
-      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state, :clasificacion_id, :picture_cache, :picture)
+      params.require(:play).permit(:title, :summary, :promotional_video, :duration, :end_date, :state, :clasificacion_id, :picture_cache, :picture, :theater_id)
     end
 end
 

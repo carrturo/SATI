@@ -69,6 +69,6 @@ class ClasificacionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def clasificacion_params
-      params.require(:clasificacion).permit(:nombre, :edadMin, :edadMax, :comentario)
+      params.require(:clasificacion).permit(:nombre, :edadMin, :edadMax, :comentario, :state)
     end
 end

@@ -69,6 +69,6 @@ class GenerosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def genero_params
-      params.require(:genero).permit(:nombre, :comentario)
+      params.require(:genero).permit(:nombre, :comentario, :state)
     end
 end

@@ -6,7 +6,6 @@ class CreateTicketReservations < ActiveRecord::Migration
       t.string :email
 
       t.timestamps
-      t.belongs_to :ticket_rservation
     end
   end
 end

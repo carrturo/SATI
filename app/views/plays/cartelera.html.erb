@@ -38,7 +38,10 @@
     <br>
     <%= play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %>
     <br><br>
-   <a class="btn btn-success" href="#">Ver Obra <span class="glyphicon glyphicon-chevron-right"></span></a>
+   <a class="btn btn-success" href="#">Ver Obra<span class="glyphicon glyphicon-chevron-right"></span></a>
+    <%= link_to new_reservation_path(play.id), class: "btn btn-success" do %>
+      Reservar<span class="glyphicon glyphicon-chevron-right"></span>
+    <% end %>
   </div>  
  </div>   
 </div>

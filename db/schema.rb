@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515204745) do
+ActiveRecord::Schema.define(version: 20150517072423) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -106,6 +106,19 @@ ActiveRecord::Schema.define(version: 20150515204745) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "state"
+  end
+
+  create_table "ticket_reservations", force: true do |t|
+    t.string   "name"
+    t.string   "identity"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ticket_reservations_tipo_tickets", force: true do |t|
+    t.integer "ticket_reservation_id"
+    t.integer "tipo_ticket_id"
   end
 
   create_table "tipo_tickets", force: true do |t|

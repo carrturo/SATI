@@ -1,0 +1,29 @@
+<h1>Listing ticket_reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Identity</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ticket_reservations.each do |ticket_reservation| %>
+      <tr>
+        <td><%= ticket_reservation.name %></td>
+        <td><%= ticket_reservation.identity %></td>
+        <td><%= ticket_reservation.email %></td>
+        <td><%= link_to 'Show', ticket_reservation %></td>
+        <td><%= link_to 'Edit', edit_ticket_reservation_path(ticket_reservation) %></td>
+        <td><%= link_to 'Destroy', ticket_reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ticket reservation', new_ticket_reservation_path %>

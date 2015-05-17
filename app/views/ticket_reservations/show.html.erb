@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ticket_reservation.name %>
+</p>
+
+<p>
+  <strong>Identity:</strong>
+  <%= @ticket_reservation.identity %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @ticket_reservation.email %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_reservation_path(@ticket_reservation) %> |
+<%= link_to 'Back', ticket_reservations_path %>

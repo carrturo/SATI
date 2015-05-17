@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "new_reservation/:play_id", to: "ticket_reservations#new", as: "new_reservation"
+  
+  resources :ticket_reservations
+
   resources :theaters
 
   resources :plays

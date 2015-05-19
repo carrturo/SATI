@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519045413) do
+ActiveRecord::Schema.define(version: 20150519211411) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -119,6 +119,12 @@ ActiveRecord::Schema.define(version: 20150519045413) do
     t.float    "total_price"
     t.integer  "total_tickets"
     t.datetime "date"
+    t.string   "token"
+  end
+
+  create_table "ticket_reservations_tipo_tickets", force: true do |t|
+    t.integer "ticket_reservation_id"
+    t.integer "tipo_ticket_id"
   end
 
   create_table "tipo_tickets", force: true do |t|

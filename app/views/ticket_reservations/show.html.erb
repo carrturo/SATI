@@ -14,19 +14,17 @@
   </div>
 </div>
 </section>
-
-
-<div class="panel panel-default jumbotron">
-  <div class="panel-body">
-    <h1> <%= @play.title %> </h1>
+<br>
+<div class="col-md-6 col-md-offset-3 jumbotron" style="background-color:#8BC34A; color:white">
+<h1> <%= @play.title %> </h1>
     <h2> Gracias por su reservacion</h2>
     <br><br>
       <h3> Token: <%= @ticket_reservation.token %> <h3/>
       <h3> Numero de butacas: <%= @ticket_reservation.total_tickets %></h3>  
       <h3> Fecha de exhibicion: <%= @ticket_reservation.date %></h3>
       <h3> Total a pagar: HNL <%= @ticket_reservation.total_price %></h3>
-  </div>
 </div>
+
   
   
 

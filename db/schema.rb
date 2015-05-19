@@ -122,11 +122,6 @@ ActiveRecord::Schema.define(version: 20150519211411) do
     t.string   "token"
   end
 
-  create_table "ticket_reservations_tipo_tickets", force: true do |t|
-    t.integer "ticket_reservation_id"
-    t.integer "tipo_ticket_id"
-  end
-
   create_table "tipo_tickets", force: true do |t|
     t.string   "tipo"
     t.float    "precio"

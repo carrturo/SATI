@@ -11,6 +11,7 @@ class TicketReservationsController < ApplicationController
   # GET /ticket_reservations/1
   # GET /ticket_reservations/1.json
   def show
+    @play = Play.find_by_id(@ticket_reservation.play_id)
   end
 
   # GET /ticket_reservations/new
@@ -29,7 +30,28 @@ class TicketReservationsController < ApplicationController
   # POST /ticket_reservations.json
   def create
     @ticket_reservation = TicketReservation.new(ticket_reservation_params)
-
+    @tipo_ticket = TipoTicket.all
+    @funcions=Play.find_by_id(params['play_id']).funcions
+    
+    cant_total=0
+    precio_total=0.00
+    
+    @tipo_ticket.each do |tipo_ticket|
+       cant_total+=params[tipo_ticket.tipo.to_sym].to_i
+     end
+    
+    @tipo_ticket.each do |tipo_ticket|
+      precio_total+= tipo_ticket.precio*params[tipo_ticket.tipo.to_sym].to_i 
+     end
+   
+    @ticket_reservation.total_price=precio_total
+    @ticket_reservation.total_tickets=cant_total
+    @funcion= Funcion.find_by_id(params[:ticket_reservation][:date])
+    @hora= @funcion.hora
+    @ticket_reservation.date=@hora
+    @funcion.cant_disponible=@funcion.cant_disponible - cant_total
+    @funcion.save
+    @ticket_reservation.play_id=params['play_id']
     respond_to do |format|
       if @ticket_reservation.save
         format.html { redirect_to @ticket_reservation, notice: 'Ticket reservation was successfully created.' }

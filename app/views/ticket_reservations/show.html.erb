@@ -1,19 +1,33 @@
-<p id="notice"><%= notice %></p>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Reservacion de ticket</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Tickets</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
-<p>
-  <strong>Name:</strong>
-  <%= @ticket_reservation.name %>
-</p>
 
-<p>
-  <strong>Identity:</strong>
-  <%= @ticket_reservation.identity %>
-</p>
+<div class="panel panel-default jumbotron">
+  <div class="panel-body">
+    <h1> <%= @play.title %> </h1>
+    <h2> Gracias por su reservacion</h2>
+    <br><br>
+    <h3> Token: <h3/>
+      <h3> Numero de butacas: <%= @ticket_reservation.total_tickets %></h3>  
+      <h3> Fecha de exhibicion: <%= @ticket_reservation.date %></h3>
+      <h3> Total a pagar: HNL <%= @ticket_reservation.total_price %></h3>
+  </div>
+</div>
+  
+  
 
-<p>
-  <strong>Email:</strong>
-  <%= @ticket_reservation.email %>
-</p>
 
-<%= link_to 'Edit', edit_ticket_reservation_path(@ticket_reservation) %> |
-<%= link_to 'Back', ticket_reservations_path %>

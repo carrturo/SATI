@@ -69,6 +69,6 @@ class FuncionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def funcion_params
-      params.require(:funcion).permit(:hora, :comentario, :state)
+      params.require(:funcion).permit(:hora, :comentario, :state, :cant_disponible)
     end
 end

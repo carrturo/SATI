@@ -56,7 +56,11 @@ class PlaysController < ApplicationController
         @play.generos << Genero.find_by_id(genero[0])
       end
       params[:funcions].each do |funcion|
-        @play.funcions << Funcion.find_by_id(funcion[0])
+        funcion = Funcion.find_by_id(funcion[0])
+        @teatro= Theater.find_by_id(params[:play][:theater_id])
+        funcion.cant_disponible=@teatro.capacity
+        funcion.save
+        @play.funcions << funcion
       end 
     
 
@@ -100,7 +104,12 @@ class PlaysController < ApplicationController
         @play.generos << Genero.find_by_id(genero[0])
       end
       params[:funcions].each do |funcion|
-        @play.funcions << Funcion.find_by_id(funcion[0])
+        funcion = Funcion.find_by_id(funcion[0])
+        @teatro= Theater.find_by_id(params[:play][:theater_id])
+        funcion.cant_disponible=@teatro.capacity
+        funcion.save
+        @play.funcions << funcion
+        
       end 
      
     respond_to do |format|

@@ -5,6 +5,7 @@ class TicketReservationsController < ApplicationController
   # GET /ticket_reservations.json
   def index
     @ticket_reservations = TicketReservation.all
+    
   end
 
   # GET /ticket_reservations/1
@@ -16,6 +17,8 @@ class TicketReservationsController < ApplicationController
   def new
     @ticket_reservation = TicketReservation.new
     @play = Play.find_by_id(params['play_id'])
+    @funcions=Play.find_by_id(params['play_id']).funcions
+    @tipo_tickets=TipoTicket.where(state: "Activo")
   end
 
   # GET /ticket_reservations/1/edit
@@ -70,6 +73,6 @@ class TicketReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_reservation_params
-      params.require(:ticket_reservation).permit(:name, :identity, :email)
+      params.require(:ticket_reservation).permit(:name, :identity, :email, :play_id, :funcion_id, :tipo_ticket_id)
     end
 end

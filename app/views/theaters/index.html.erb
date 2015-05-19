@@ -1,29 +1,65 @@
-<h1>Listing theaters</h1>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Teatros</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Teatros</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Capacity</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="jumbotron">
+ <div>
+   <div>
+   <%= link_to new_theater_path do %>
+        <i class="fa fa-plus-square bigicon"  style="font-size:30px"></i>
+  <% end %>
+      
+       <div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-success"> 
+    <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+    
+    </div>
+   <table class="table table-striped ">
+      <thead>
+           <tr>
+             <th>Nombre</th>
+             <th>Direccion</th>
+             <th>Capacidad</th>
+           </tr>
+      </thead>
+        <tbody>
+           <% @theaters.each do |theater| %>
+          <tr>
+          <td><%= theater.name %></td>
+          <td><%= theater.address %></td>
+          <td><%= theater.capacity %></td>
+          <td> <%= link_to edit_theater_path(theater) do %>
+            <i class="fa fa-pencil-square bigicon"  style="font-size:30px"></i>
+              <% end %>
+        </td>
+ 
+      <td>
+        <%= link_to theater, method: :delete, data: { confirm: 'Esta seguro?' }  do %>
+           <i class="fa fa-minus-square bigicon" style="font-size:30px"></i>
+        <% end %>
+           </td>
+           </tr> 
+      
+        <% end %>
+     </tbody>
+   </table>
+ </div>   
+ </div>
+ </div>  
+ </div>
 
-  <tbody>
-    <% @theaters.each do |theater| %>
-      <tr>
-        <td><%= theater.name %></td>
-        <td><%= theater.address %></td>
-        <td><%= theater.capacity %></td>
-        <td><%= link_to 'Show', theater %></td>
-        <td><%= link_to 'Edit', edit_theater_path(theater) %></td>
-        <td><%= link_to 'Destroy', theater, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>  
 
-<br>
-
-<%= link_to 'New Theater', new_theater_path %>

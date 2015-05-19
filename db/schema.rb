@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517072423) do
+ActiveRecord::Schema.define(version: 20150519045413) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -60,11 +60,12 @@ ActiveRecord::Schema.define(version: 20150517072423) do
   end
 
   create_table "funcions", force: true do |t|
-    t.time     "hora"
+    t.datetime "hora"
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "state"
+    t.integer  "cant_disponible"
   end
 
   create_table "funcions_plays", force: true do |t|
@@ -114,11 +115,10 @@ ActiveRecord::Schema.define(version: 20150517072423) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "ticket_reservations_tipo_tickets", force: true do |t|
-    t.integer "ticket_reservation_id"
-    t.integer "tipo_ticket_id"
+    t.integer  "play_id"
+    t.float    "total_price"
+    t.integer  "total_tickets"
+    t.datetime "date"
   end
 
   create_table "tipo_tickets", force: true do |t|

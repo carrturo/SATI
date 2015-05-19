@@ -28,7 +28,7 @@ class TheatersController < ApplicationController
 
     respond_to do |format|
       if @theater.save
-        format.html { redirect_to @theater, notice: 'Theater was successfully created.' }
+        format.html { redirect_to theaters_path, notice: 'Theater was successfully created.' }
         format.json { render :show, status: :created, location: @theater }
       else
         format.html { render :new }

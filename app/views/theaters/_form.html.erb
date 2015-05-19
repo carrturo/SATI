@@ -1,4 +1,6 @@
-<%= form_for(@theater) do |f| %>
+<br><br>
+<%= form_for(@theater, html: { class: 'form-horizontal'}) do |f| %>
+<fieldset>  
   <% if @theater.errors.any? %>
     <div id="error_explanation">
       <h2>Error al guardar Teatro</h2>
@@ -10,24 +12,51 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </div>
-  <div class="field">
-    <%= f.label :capacity %><br>
-    <%= f.number_field :capacity %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-     <%= f.select :state, options_for_select(%w[Activo Inactivo]) %> 
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+   <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-pencil bigicon"></i><br>Nombre*</span>
+           <div class="col-md-8">
+               <%= f.text_field :name , autofocus: true , class: "form-control",style:" width: 500px;" %>                  </div>
+   </div>
+  
+       <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-bars bigicon"></i>Direccion*</span>
+           <div class="col-md-8">
+             <%= f.text_area :address, class: "form-control",style:" width: 500px; height:150px" %>                                  </div>
+   </div>
+  
+    <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-keyboard-o bigicon"></i><br>Capacidad*</span>
+           <div class="col-md-8">
+               <%= f.number_field :capacity , class: "form-control",style:" width: 500px;" %>                                  </div>
+   </div>
+ 
+  
+     <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-circle-o-notch bigicon"></i><br>Estado*</span>
+           <div class="col-md-8">
+             <%= f.select :state, options_for_select(%w[Activo Inactivo]) %>                                   </div>
+   </div>
+  
+   <div class="col-md-2 col-md-offset-5 actions" >
+  <%= f.submit "Aceptar", class:"btn btn-lg btn-success" %>
+       
+      </div> 
+ </fieldset>   
 <% end %>
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size: 25px;
+        color: #00C12B;
+    }
+</style>

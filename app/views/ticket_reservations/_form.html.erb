@@ -1,4 +1,6 @@
-<%= form_for(@ticket_reservation) do |f| %>
+<br><br>
+<%= form_for(@ticket_reservation, html: { class: 'form-horizontal'}) do |f| %>
+ <fieldset> 
   <% if @ticket_reservation.errors.any? %>
     <div id="error_explanation">
       <h2>Error al guardar Reservación</h2>
@@ -11,19 +13,71 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :identity %><br>
-    <%= f.text_field :identity %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-user bigicon"></i><br>Nombre*</span>
+           <div class="col-md-8">
+               <%=  f.text_field :name, autofocus: true , class: "form-control",style:" width: 500px;" %>                  </div>
+    </div>
+
+   <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-credit-card bigicon"></i><br>Identidad*</span>
+           <div class="col-md-8">
+               <%=  f.text_field :identity, class: "form-control",style:" width: 500px;" %>                  </div>
+    </div>
+
+    <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-at bigicon"></i><br>Correo*</span>
+           <div class="col-md-8">
+               <%=  f.text_field :email, class: "form-control",style:" width: 500px;" %>                  </div>
+    </div>
+<div class="form-group">
+   <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-cubes bigicon"></i><br>Tipo de ticket*</span>
+<div class="col-md-8" style="width: 500px;">
+             <div class="panel panel-success"> 
+               <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+                </div>
+                <table class="table table-striped " >
+                   <thead>
+                        <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>  
+                        </tr>
+                   </thead>
+                  <tbody>
+                    <% @tipo_tickets.each do |tipo_ticket| %>
+                       <tr>
+                         <td><%= tipo_ticket.tipo %></td>
+                         <td><%= tipo_ticket.precio %></td>
+                         <td><%=number_field_tag(tipo_ticket.tipo.to_sym, value = nil, options = {}) %></td>
+                       </tr>  
+                    <% end %>  
+                  </tbody>  
+               
+               </table>  
+             </div>  
+             
+           </div>   
+ </div>
+ <div class="col-md-2 col-md-offset-5 actions" >
+    <%= f.submit "Aceptar", class:"btn btn-lg btn-success" %>
+       
+      </div> 
+</fieldset>  
 <% end %>
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size: 25px;
+        color: #00C12B;
+    }
+</style>

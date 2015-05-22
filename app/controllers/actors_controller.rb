@@ -6,7 +6,10 @@ class ActorsController < ApplicationController
   def index
     @actors = Actor.all
   end
-
+  
+def actorhistory
+    @actors = Actor.all
+  end
   # GET /actors/1
   # GET /actors/1.json
   def show

@@ -29,9 +29,17 @@ class TicketReservationsController < ApplicationController
   # POST /ticket_reservations
   # POST /ticket_reservations.json
   def create
-    @ticket_reservation = TicketReservation.new(ticket_reservation_params)
-    @tipo_ticket = TipoTicket.all
+    @ticket_reservation = TicketReservation.new
+    @play = Play.find_by_id(params['play_id'])
     @funcions=Play.find_by_id(params['play_id']).funcions
+    @tipo_tickets=TipoTicket.where(state: "Activo")
+   
+    #VIENEN DE FORMULARIO
+    @tipo_ticket = TipoTicket.all
+    @play = Play.find_by_id(params['play_id'])
+    @ticket_reservation = TicketReservation.new(ticket_reservation_params)
+    @funcions=Play.find_by_id(params['play_id']).funcions
+    
     
     cant_total=0
     precio_total=0.00

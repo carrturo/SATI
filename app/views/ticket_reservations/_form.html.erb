@@ -57,7 +57,7 @@
                        <tr>
                          <td><%= tipo_ticket.tipo %></td>
                          <td><%= tipo_ticket.precio %></td>
-                         <td><%=number_field_tag(tipo_ticket.tipo.to_sym) %></td>
+                         <td><%= number_field_tag(tipo_ticket.tipo.to_sym, nil, class: 'cantidad_boletos') %></td>
                        </tr>  
                     <% end %>  
                   </tbody>  

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @info_general.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @info_general.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @info_general.telefono %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @info_general.email %>
+</p>
+
+<p>
+  <strong>Fb:</strong>
+  <%= @info_general.fb %>
+</p>
+
+<p>
+  <strong>Tw:</strong>
+  <%= @info_general.tw %>
+</p>
+
+<p>
+  <strong>Youtube:</strong>
+  <%= @info_general.youtube %>
+</p>
+
+<p>
+  <strong>Ig:</strong>
+  <%= @info_general.ig %>
+</p>
+
+<%= link_to 'Edit', edit_info_general_path(@info_general) %> |
+<%= link_to 'Back', info_generals_path %>

@@ -1,0 +1,46 @@
+<body>
+  <section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Reservacion de ticket</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Tickets</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+<br>
+<div class="col-md-6 col-md-offset-3 jumbotron" style="background-color:#8BC34A; color:white">
+<h1> <%= @play.title %> </h1>
+    
+    <br><br>
+      <h3> Token: <%= @ticket.token %> <h3/>
+      <h3> A nombre de: <%= @ticket.name %></h3>
+      <h3> Identificación<%= @ticket.identity %></h3>
+      <h3> Numero de butacas: <%= @ticket.total_tickets %></h3>  
+      <h3> Fecha de exhibicion: <%= @ticket.date %></h3>
+      <h3> Total a pagar: HNL <%= @ticket.total_price %></h3>
+       
+    <%= @ticket.state %>
+        </div>
+  
+  <center>
+  <h2>Entrega de Ticket</h2>
+  <br>
+  <h3>Ticket Encontrado</h3>
+    <p>informacion del ticket vendido</p>
+    <%= @ticket.name %>
+    <%= @ticket.identity %>
+    <%= @ticket.email %>
+    <%= @ticket.state %>
+  </center>
+  
+  
+</body>
+

@@ -15,4 +15,5 @@
 //= require jquery-ui
 //= require bootstrap
 //= require turbolinks
+//= require wow.min
 //= require_tree .

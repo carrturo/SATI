@@ -46,11 +46,6 @@ ActiveRecord::Schema.define(version: 20150525191430) do
     t.string   "state"
   end
 
-  create_table "clasificacions_plays", force: true do |t|
-    t.integer "clasificacion_id"
-    t.integer "play_id"
-  end
-
   create_table "destrezas", force: true do |t|
     t.string   "nombre"
     t.string   "comentario"

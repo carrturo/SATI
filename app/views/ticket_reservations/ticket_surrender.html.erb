@@ -1,0 +1,12 @@
+<body>
+  <center>
+  <h2>Entrega de Ticket</h2>
+  <br>
+    <%= form_tag("/ticket_surrender", method: "post") do %>
+    <%= label_tag(:token_label, "Ingresaar Token:") %>
+      <%= text_field_tag(:token) %>
+      <br>
+      <%= submit_tag("Buscar") %>
+    <% end %>
+  </center>
+</body>

@@ -26,7 +26,16 @@ Rails.application.routes.draw do
   get 'home/index'
   get '/cartelera', to: "plays#cartelera", as: "cartelera"
   get '/actorhistory', to: "actors#actorhistory", as: "actorhistory"
-   get '/playhistory', to: "plays#playhistory", as: "playhistory"
+  get '/playhistory', to: "plays#playhistory", as: "playhistory"
+  get '/ticket_surrender', to: "ticket_reservations#ticket_surrender", as: "ticket_surrender"
+  post '/ticket_surrender', to: "ticket_reservations#ticket_surrender_rev", as: "ticket_token"
+  get '/ticket_no_found', to: "ticket_reservations#ticket_no_found", as: "ticket_no_found"
+  get '/ticket_found/:id', to: "ticket_reservations#ticket_found", as: "ticket_found"
+  post '/ticket_found/:id', to: "ticket_reservations#ticket_found", as: "ticket_state"
+  get '/ticketcstate/:id', to: "ticket_reservations#ticketcstate", as: "ticketcstate"
+  
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

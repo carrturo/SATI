@@ -13,7 +13,42 @@ class TicketReservationsController < ApplicationController
   def show
     @play = Play.find_by_id(@ticket_reservation.play_id)
   end
-
+  
+  def find_data
+    @play_token = Play.find_by_id(@ticket.play_id)
+    @funcion_token = Funcion.find_by_id(@ticket.funcion_id)
+    
+  end
+  
+  def ticket_surrender
+     
+     @ticket_reservations = TicketReservation.all       
+  end
+  
+  def ticket_surrender_rev
+    @ticket=TicketReservation.where(token:params[:token]).first
+     if @ticket.nil?
+       redirect_to ticket_no_found_path
+     else
+       redirect_to ticket_found_path(@ticket)
+     end
+  end
+    
+    def ticket_no_found
+    
+    end
+    
+    def ticket_found
+      @ticket = TicketReservation.find_by_id(params[:id])
+      @play= Play.where(params[TicketReservation.find_by_id(params[:id]).play_id])
+         
+    end
+  
+  def ticketcstate
+    @ticket= TicketReservation.find_by_id(params[:id])
+    @ticket.state = "Entregado"
+    @ticket.save
+  end
   # GET /ticket_reservations/new
   def new
     @ticket_reservation = TicketReservation.new
@@ -103,6 +138,6 @@ class TicketReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_reservation_params
-      params.require(:ticket_reservation).permit(:name, :identity, :email, :play_id, :funcion_id, :tipo_ticket_id)
+      params.require(:ticket_reservation).permit(:name, :identity, :email, :play_id, :funcion_id, :tipo_ticket_id,:state)
     end
 end

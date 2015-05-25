@@ -101,6 +101,6 @@ def actorhistory
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def actor_params
-      params.require(:actor).permit(:name, :gender, :identity, :email, :facebook_profile, :biography, :state)
+      params.require(:actor).permit(:name, :gender, :identity, :email, :facebook_profile, :biography, :state,:picture)
     end
 end

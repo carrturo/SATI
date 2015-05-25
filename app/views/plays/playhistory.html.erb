@@ -1,0 +1,57 @@
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Obras</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Actores</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Section: about -->
+    <section id="about" class="home-section text-center" style="background-image: url(<%= asset_path 'background-plays.png' %>);background-repeat: no-repeat;background-size:cover;height:100%">
+   <br><br>		
+     <div class="container">
+        <% cont=0%>
+       <% @plays.each do |play| %>
+           <% if cont==0%>
+             <% @str = "<div class='row'>".html_safe %>
+               <%= @str %>
+             
+           <%end%>
+           <div class="col-xs-6 col-sm-3 col-md-3">
+				       <div class="wow bounceInUp" data-wow-delay="0.2s">
+                 <div class="team boxed-grey">
+                   <div class="inner">
+                     <h3><B><%= play.title %></B></h3>
+                      <div class="avatar">
+                          <%=cl_image_tag(play.picture, :alt => "imagen", :width => 223, :height =>223, class:"img-responsive img-circle") %>
+                       </div>
+                       <%= link_to play, class: "btn btn-success subtitle" do %>
+                       Ver mas<span class="glyphicon glyphicon-chevron-right"></span>
+                     <% end %>
+                    </div>
+                </div>
+				</div>
+            </div>     
+       
+            <% cont= cont+1 %>
+           <%if cont==4%>
+            <% @str = "</div>".html_safe %>
+              <%= @str %>
+            <% @str = "<br>".html_safe %>
+              <%= @str %>
+             <% cont=0 %>
+           <% end %>
+       <% end %>       
+       
+       </div>
+	</section>
+	<!-- /Section: about -->

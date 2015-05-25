@@ -16,25 +16,27 @@
 </section>
 
 <!-- Section: about -->
-    <section id="about" class="home-section text-center" style="background-image: url(<%= asset_path 'background-actors.png' %>);background-repeat: no-repeat;background-size:cover;height:600px">
+    <section id="about" class="home-section text-center" style="background-image: url(<%= asset_path 'background-actors.png' %>);background-repeat: no-repeat;background-size:cover;height:100%">
    <br><br>		
      <div class="container">
         <% cont=0%>
        <% @actors.each do |actor| %>
            <% if cont==0%>
-             <%= print "<div class='row'>"%>
+             <% @str = "<div class='row'>".html_safe %>
+               <%= @str %>
+             
            <%end%>
            <div class="col-xs-6 col-sm-3 col-md-3">
 				       <div class="wow bounceInUp" data-wow-delay="0.2s">
                  <div class="team boxed-grey">
                    <div class="inner">
-						        <h5><%= actor.name %></h5>
-                     <%= link_to actor, class: "btn btn-success subtitle" do %>
+						        <h3><B><%= actor.name %></B></h3>
+                      <div class="avatar">
+                          <%=cl_image_tag(actor.picture, :alt => "imagen", :width => 223, :height =>223, class:"img-responsive img-circle") %>
+                       </div>
+                       <%= link_to actor, class: "btn btn-success subtitle" do %>
                        Ver mas<span class="glyphicon glyphicon-chevron-right"></span>
                      <% end %>
-                       <div class="avatar">
-                          <%= image_tag(actor.picture, :alt => "imagen", :width => 223, :height =>223, class:"img-responsive img-circle") %>
-                       </div>
                     </div>
                 </div>
 				</div>
@@ -42,7 +44,10 @@
        
             <% cont= cont+1 %>
            <%if cont==4%>
-             <%= print "</div> "%>
+            <% @str = "</div>".html_safe %>
+              <%= @str %>
+            <% @str = "<br>".html_safe %>
+              <%= @str %>
              <% cont=0 %>
            <% end %>
        <% end %>       

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :info_generals
 
   get "new_reservation/:play_id", to: "ticket_reservations#new", as: "new_reservation"
+ 
   
   resources :ticket_reservations
 
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get '/cartelera', to: "plays#cartelera", as: "cartelera"
   get '/actorhistory', to: "actors#actorhistory", as: "actorhistory"
+   get '/playhistory', to: "plays#playhistory", as: "playhistory"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,7 +11,10 @@ class PlaysController < ApplicationController
   # GET /plays/1.json
   def show
   end
-
+  
+  def playhistory
+  @plays =Play.all
+  end  
   # GET /plays/new
   def new
     @play = Play.new

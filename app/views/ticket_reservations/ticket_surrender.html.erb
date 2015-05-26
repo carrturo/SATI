@@ -1,12 +1,52 @@
-<body>
-  <center>
-  <h2>Entrega de Ticket</h2>
-  <br>
-    <%= form_tag("/ticket_surrender", method: "post") do %>
-    <%= label_tag(:token_label, "Ingresaar Token:") %>
-      <%= text_field_tag(:token) %>
-      <br>
-      <%= submit_tag("Buscar") %>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Reservacion de ticket</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Tickets</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+ 
+  
+  <br><br>
+    <%= form_tag("/ticket_surrender", method: "post", class: 'form-horizontal') do %>
+    <fieldset>
+    <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-pencil bigicon"></i><br>Ingresar token*</span>
+           <div class="col-md-8">
+             <%= text_field_tag(:token,"", class: "form-control",style:" width: 500px;") %>
+                                 </div>
+    </div>
+  
+    <div class="col-md-2 col-md-offset-5 actions" >
+      <%= submit_tag("Buscar", class:"btn btn-lg btn-success") %> 
+    </div> 
+ 
     <% end %>
-  </center>
-</body>
+      </fieldset>
+ 
+
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size: 25px;
+        color: #00C12B;
+    }
+</style>

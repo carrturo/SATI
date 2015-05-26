@@ -1,8 +1,24 @@
-<body>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Reservacion de ticket</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Tickets</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
   <center>
-  <h2>Entrega de Ticket</h2>
+  
   <br>
-  <h3>Ticket NO Encontrado</h3>
+  <h3>Ticket no Encontrado</h3>
     <%= form_tag("/ticket_surrender", method: "post") do %>
     <%= label_tag(:token, "Ingresaar Token:") %>
       <%= text_field_tag(:token) %>
@@ -10,5 +26,5 @@
       <%= submit_tag("Buscar") %>
     <% end %>
   </center>
-</body>
+
 

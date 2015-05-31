@@ -10,6 +10,7 @@ class PlaysController < ApplicationController
   # GET /plays/1
   # GET /plays/1.json
   def show
+ 
   end
   
   def playhistory

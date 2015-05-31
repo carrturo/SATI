@@ -1,24 +1,10 @@
-<section id="title" class="emerald seccion1">
-  <br><br><br><br>
- <div class="container">
-   <div class="row">
-    <div class="col-sm-6">
-      <h1>Actores</h1>
-    </div>
-    <div class="col-sm-6">
-      <ul class="breadcrumb pull-right">
-        <li><%= link_to 'Inicio', root_path %></li>
-        <li class="active">Actores</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
+
 
 <!-- Section: about -->
     <section id="about" class="home-section text-center" style="background-image: url(<%= asset_path 'background-actors.png' %>);background-repeat: no-repeat;background-size:cover;height:100%">
-   <br><br>		
+   <br><br><br>		
      <div class="container">
+       
         <% cont=0%>
        <% @actors.each do |actor| %>
            <% if cont==0%>
@@ -26,21 +12,17 @@
                <%= @str %>
              
            <%end%>
-           <div class="col-xs-6 col-sm-3 col-md-3">
+              <div class="col-xs-6 col-sm-3 col-md-3">
 				       <div class="wow bounceInUp" data-wow-delay="0.2s">
                  <div class="team boxed-grey">
                    <div class="inner">
-						        <h3><B><%= actor.name %></B></h3>
-                      <div class="avatar">
-                          <%=cl_image_tag(actor.picture, :alt => "imagen", :width => 223, :height =>223, class:"img-responsive img-circle") %>
-                       </div>
-                       <%= link_to actor, class: "btn btn-success subtitle" do %>
-                       Ver mas<span class="glyphicon glyphicon-chevron-right"></span>
-                     <% end %>
-                    </div>
-                </div>
-				</div>
-            </div>     
+						         <%=cl_image_tag(actor.picture, :alt => "imagen", :width => 245, :height =>245) %>
+                     <h2 class="actorname"><%=link_to actor.name, actor_path(actor), style:"color:white"%></h2>
+                   </div>
+                 </div>
+				       </div>
+             </div> 
+          
        
             <% cont= cont+1 %>
            <%if cont==4%>

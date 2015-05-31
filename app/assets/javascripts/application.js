@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-//= require turbolinks
+// require turbolinks
 //= require wow.min
+//= require skel.min
+//= require skel-viewport.min
 //= require_tree .

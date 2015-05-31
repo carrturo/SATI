@@ -1,102 +1,109 @@
-<section id="title" class="emerald seccion1">
-  <br><br><br><br>
- <div class="container">
-   <div class="row">
-    <div class="col-sm-6">
-      <h1>Actores</h1>
-    </div>
-    <div class="col-sm-6">
-      <ul class="breadcrumb pull-right">
-        <li><%= link_to 'Inicio', root_path %></li>
-        <li class="active">Actores</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
-
- <div class="jumbotron">
-  <h1> <%= @actor.name %></h1> 
-  <br><br>
+<div class="container">
   <div class="row">
-     <div class="col-md-10 col-md-offset-1">
-        <div class="col-md-7">
-         <%= cl_image_tag(@actor.picture, :alt => "imagen", :width => 300, :height =>300) %>
-        </div>
-  
-  <div class="col-md-5">
-    <h3>Destrezas</h3>
-    <br>
-    <%= @actor.destrezas.map { |destreza| destreza.nombre}.join(' | ') %>
-    <br>
-    <h5><B>Correo:</B> <%= @actor.email %></h5>
-    <h5><B>Facebook:</B> <%= @actor.facebook_profile %></h5>
-    <h5><B>Estado:</B> <%= @actor.state %></h5>
-    
-       
-       
- </div>  
-     
-     
-     
-   </div>  
-
-</div>
-   <br><br>
-  <hr> 
-   <div>
-  <h1> Biografia </h1>
-  <br><br>
-     
-     <p>
-  <%= @actor.biography %>
-  </p>
-  
-</div>
-   <br><br>
-   <hr>
-     <h1> Obras en las que ha participado<h1/>
-       <section id="about" class="home-section text-center" style="background-image: url(<%= asset_path 'background-plays.png' %>);background-repeat: no-repeat;background-size:cover;height:100%">
-   <br><br>		
-       
-     <div class="container">
-        <% cont=0%>
-       <% @actor.plays.each do |play| %>
-           <% if cont==0%>
-             <% @str = "<div class='row'>".html_safe %>
-               <%= @str %>
-             
-           <%end%>
-           <div class="col-xs-6 col-sm-3 col-md-3">
-				       <div class="wow bounceInUp" data-wow-delay="0.2s">
-                 <div class="team boxed-grey">
-                   <div class="inner">
-                     <h3><B><%= play.title %></B></h3>
-                      <div class="avatar">
-                          <%=cl_image_tag(play.picture, :alt => "imagen", :width => 223, :height =>223, class:"img-responsive img-circle") %>
-                       </div>
-                       <%= link_to play, class: "btn btn-success subtitle" do %>
-                       Ver mas<span class="glyphicon glyphicon-chevron-right"></span>
-                     <% end %>
-                    </div>
-                </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<div id="sidebar">
+					<div class="sosmed">
+						<div class="text-center">
+							<a href="#"><i class="fa fa-facebook fa-2x" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"></i></a>
+              <a href="#"><i class="fa fa-envelope-o fa-2x" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"></i></a>
+						</div>
+					</div>
+					<div class="user">
+						<div class="text-center">
+               <%= cl_image_tag(@actor.picture, :alt => "imagen",:width =>250, :height =>250, class:"img-circle") %>
+					  </div>
+						<div class="user-head">
+              <h1><%= @actor.name%></h1>
+							<div class="hr-center"></div>
+              <br>
+              <h5><%= @actor.state %></h5>
+						</div>
+					</div>
+					<div class="link-me">
+					<div class="hr-center"></div>
+					</div>
 				</div>
-            </div>     
-       
-            <% cont= cont+1 %>
-           <%if cont==4%>
-            <% @str = "</div>".html_safe %>
-              <%= @str %>
-            <% @str = "<br>".html_safe %>
-              <%= @str %>
-             <% cont=0 %>
-           <% end %>
-       <% end %>       
-       
-       </div>
-	</section>
-       
-       
-   </div>
-   
+			</div>
+    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<div id="content">
+					<!-- start:main content -->
+					<div class="main-content">
+						<ul class="timeline">
+							<!-- start:profile -->
+							<li id="id-profile">
+								<div class="timeline-badge default"><i class="fa fa-user" data-original-title="" title=""></i></div>
+								<h1 class="timeline-head">PERFIL</h1>
+							</li>
+					          <li id="personal-info">
+					          	<div class="timeline-badge primary"></div>
+					          	<div class="timeline-panel">
+					          		<h1>Informacion personal</h1>
+					          		<div class="hr-left"></div>
 
+					          		<div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Nombre</button>
+                          <button type="button" disabled="" class="btn btn-default"><%= @actor.name%></button>
+									</div>
+									<div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Destrezas</button>
+									  	<button type="button" disabled="" class="btn btn-default">
+                          <%= @actor.destrezas.map { |destreza| destreza.nombre}.join(' | ') %>
+                      </button>
+									</div>
+									<div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">email</button>
+                    <button type="button" disabled="" class="btn btn-default"><%= @actor.email%></button>
+									</div>
+								
+					          	</div>
+					        </li>
+                            <li id="profile">
+					          	<div class="timeline-badge primary"></div>
+					          	<div class="timeline-panel">
+					          		<h1>Biografia</h1>
+					          		  <div class="hr-left"></div>
+					             <p> <%= @actor.biography %> </p>
+					          	</div>
+					        </li>
+					        <!-- end:profile -->
+
+					       
+					        <!-- start:blog -->
+					        <li id="id-blog">
+					        	<div class="timeline-badge default"><i class="fa fa-comments" data-original-title="" title=""></i></div>
+					        	<h1 class="timeline-head">OBRAS</h1>
+					        </li>
+                     <% @actor.plays.each do |play| %>
+                          <li>
+					          	<div class="timeline-badge primary"></div>
+					          	<div class="timeline-panel">
+					          		<div class="row" id="blog">
+					          			<div class="col-md-7 col-sm-6 col-xs-12">
+					          				<div class="blog-content">
+                              <h3><%= link_to play.title, play_path(play) %></h3>
+					          					<p><%= play.summary %></p>
+					          				</div>
+					          			</div>
+					          			<div class="col-md-5 col-sm-6 col-xs-12">
+                            <%= cl_image_tag(play.picture, :alt => "imagen",class: "img-responsive") %>
+					          			</div>
+					          		</div>
+					          	</div>
+					        </li>
+              
+                      <% end %>
+                <!-- end:blog -->
+
+					        
+					    </ul>
+					</div>
+					<!-- end:main content -->
+				</div>
+			</div>
+  
+    
+  </div>
+  
+</div>
+
+ 

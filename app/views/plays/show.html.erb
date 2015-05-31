@@ -1,99 +1,130 @@
-<section id="title" class="emerald seccion1">
-  <br><br><br><br>
- <div class="container">
-   <div class="row">
-    <div class="col-sm-6">
-      <h1>Obras</h1>
-    </div>
-    <div class="col-sm-6">
-      <ul class="breadcrumb pull-right">
-        <li><%= link_to 'Inicio', root_path %></li>
-        <li class="active">Actores</li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
-
- <div class="jumbotron">
-   <h1> <%= @play.title %></h1> 
-  <br><br>
+<div class="container">
   <div class="row">
-     <div class="col-md-10 col-md-offset-1">
-        <div class="col-md-7">
-         <%= cl_image_tag(@play.picture, :alt => "imagen", :width => 300, :height =>300) %>
-        </div>
-  
-  <div class="col-md-5">
-    <h5>Funciones:</h5>
-    <br>
-     <%= @play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %>
-    <br>
-     <h5><B>Duracion: </B><%= @play.duration %></h5>
-     <h5><B>Estado:</B> <%= @play.state %></h5>
-     <h5><B>Presentada hasta: </B><%= @play.end_date %></h5>
-    
- </div>  
-     
-     
-     
-   </div>  
-
-</div>
-   <br><br>
-  <hr> 
-   <div>
-  <h1> Sinopsis</h1>
-  <br><br>
-     
-     <p>
-  <%= @play.summary %>
-  </p>
-  
-</div>
-   <br><br>
-
- <hr>
-     <h1>Reparto<h1/>
-       <section id="about" class="home-section text-center" style="background-image: url(<%= asset_path 'background-actors.png' %>);background-repeat: no-repeat;background-size:cover;height:100%">
-   <br><br>		
-       
-     <div class="container">
-        <% cont=0%>
-       <% @play.actors.each do |actor| %>
-           <% if cont==0%>
-             <% @str = "<div class='row'>".html_safe %>
-               <%= @str %>
-             
-           <%end%>
-           <div class="col-xs-6 col-sm-3 col-md-3">
-				       <div class="wow bounceInUp" data-wow-delay="0.2s">
-                 <div class="team boxed-grey">
-                   <div class="inner">
-                     <h3><B><%= actor.name %></B></h3>
-                      <div class="avatar">
-                          <%=cl_image_tag(actor.picture, :alt => "imagen", :width => 223, :height =>223, class:"img-responsive img-circle") %>
-                       </div>
-                       <%= link_to actor, class: "btn btn-success subtitle" do %>
-                       Ver mas<span class="glyphicon glyphicon-chevron-right"></span>
-                     <% end %>
-                    </div>
-                </div>
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+				<div id="sidebar">
+					<div class="sosmed">
+						<div class="text-center">
+							<a href="#"><i class="fa fa-youtube fa-2x" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"></i></a>
+          </div>
+					</div>
+					<div class="user">
+						<div class="text-center">
+					  </div>
+						<div class="user-head">
+              <h1 style="font-size:70px"><%= @play.title%></h1>
+              <br>
+							<div class="hr-center"></div>
+              <br>
+              <h5 style="font-size:40px"><%= @play.state %></h5>
+              <br>
+              <div class="hr-center"></div>
+						</div>
+					</div>
+					
 				</div>
-            </div>     
-       
-            <% cont= cont+1 %>
-           <%if cont==4%>
-            <% @str = "</div>".html_safe %>
-              <%= @str %>
-            <% @str = "<br>".html_safe %>
-              <%= @str %>
-             <% cont=0 %>
-           <% end %>
-       <% end %>       
-       
-       </div>
-	</section>
-       
+			</div>
+    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<div id="content">
+					<!-- start:main content -->
+					<div class="main-content">
+            <div>
+              <%= cl_image_tag(@play.picture, :alt => "imagen", :width =>"100%", :height =>"100%") %>
+            </div>
+            <br><br><br>
+						<ul class="timeline">
+							<!-- start:profile -->
+							<li id="id-profile">
+								<div class="timeline-badge default"><i class="fa fa-user" data-original-title="" title=""></i></div>
+								<h1 class="timeline-head">Informacion</h1>
+							</li>
+					          <li id="personal-info">
+					          	<div class="timeline-badge primary"></div>
+					          	<div class="timeline-panel">
+					          		<h1>Detalles de la obra</h1>
+					          		<div class="hr-left"></div>
 
+					          		<div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Nombre</button>
+                          <button type="button" disabled="" class="btn btn-default"><%= @play.title%></button>
+									</div>
+									<div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Duracion</button>
+                    <button type="button" disabled="" class="btn btn-default"><%= @play.duration %>
+                      </button>
+									</div>
+									<div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Presentada hasta</button>
+                      <button type="button" disabled="" class="btn btn-default"><%= @play.end_date %></button>
+									</div>
+                  
+                  <div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Presentada hasta</button>
+                      <button type="button" disabled="" class="btn btn-default"><%= @play.end_date %></button>
+									</div>      
+								  
+                 <div class="btn-group">
+									  	<button type="button" disabled="" class="btn btn-primary">Genero</button>
+                   <button type="button" disabled="" class="btn btn-default">  
+                     <%= @play.generos.map { |genero| genero.nombre}.join(' , ') %>
+                   </button>
+									</div>
+                  
+                  <div class="btn-group">
+									 <button type="button" disabled="" class="btn btn-primary">Funciones</button>
+                   <button type="button" disabled="" class="btn btn-default">
+                    <%= @play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %> 
+                   </button>
+									</div>
+                 
+                
+                        
+					          	</div>
+					        </li>
+                            <li id="profile">
+					          	<div class="timeline-badge primary"></div>
+					          	<div class="timeline-panel">
+					          		<h1>Sinopsis</h1>
+					          		  <div class="hr-left"></div>
+					             <p> <%= @play.summary %> </p>
+					          	</div>
+					        </li>
+					        <!-- end:profile -->
 
+					       
+					        <!-- start:blog -->
+					        <li id="id-blog">
+					        	<div class="timeline-badge default"><i class="fa fa-comments" data-original-title="" title=""></i></div>
+					        	<h1 class="timeline-head">Reparto</h1>
+					        </li>
+                     <% @play.actors.each do |actor| %>
+                          <li>
+					          	<div class="timeline-badge primary"></div>
+					          	<div class="timeline-panel">
+					          		<div class="row" id="blog">
+					          			<div class="col-md-7 col-sm-6 col-xs-12">
+					          				<div class="blog-content">
+                              <h3><%= link_to actor.name, actor_path(actor) %></h3>
+					          					<p><%= actor.biography %></p>
+					          				</div>
+					          			</div>
+					          			<div class="col-md-5 col-sm-6 col-xs-12">
+                            <%= cl_image_tag(actor.picture, :alt => "imagen",class: "img-responsive") %>
+					          			</div>
+					          		</div>
+					          	</div>
+					        </li>
+              
+                      <% end %>
+                <!-- end:blog -->
+
+					        
+					    </ul>
+					</div>
+					<!-- end:main content -->
+				</div>
+			</div>
+  
+    
+  </div>
+  
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525191430) do
+ActiveRecord::Schema.define(version: 20150531210029) do
 
   create_table "actors", force: true do |t|
     t.string   "name"
@@ -44,6 +44,11 @@ ActiveRecord::Schema.define(version: 20150525191430) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "state"
+  end
+
+  create_table "clasificacions_plays", force: true do |t|
+    t.integer "clasificacion_id"
+    t.integer "play_id"
   end
 
   create_table "destrezas", force: true do |t|
@@ -90,6 +95,15 @@ ActiveRecord::Schema.define(version: 20150525191430) do
     t.string   "tw"
     t.string   "youtube"
     t.string   "ig"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "news", force: true do |t|
+    t.string   "title"
+    t.string   "text"
+    t.string   "picture"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

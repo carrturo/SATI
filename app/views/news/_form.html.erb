@@ -1,0 +1,63 @@
+<br><br>
+<%= form_for(@news, html: { class: 'form-horizontal'}) do |f| %>
+ <fieldset> 
+  <% if @news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% @news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-pencil-square-o bigicon"></i><br>Titulo*</span>
+           <div class="col-md-8">
+               <%=  f.text_field  :title, autofocus: true , class: "form-control",style:" width: 500px;" %>                  </div>
+ </div>
+   
+  <div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-align-justify bigicon"></i><br>Contenido*</span>
+           <div class="col-md-8">
+               <%=  f.text_area :text, class: "form-control",style:" width: 500px;height:150px"%>                  </div>
+ </div>
+   
+    <div class="form-group">
+    <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-file-image-o bigicon"></i><br>Imagen</span>
+           <div class="col-md-8">
+             <%= f.hidden_field :picture_cache %>
+             <%= f.file_field :picture %>         
+           </div>
+  </div> 
+   
+<div class="form-group">
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-calendar bigicon"></i><br>Fecha*</span>
+           <div class="col-md-8">
+             <%= f.date_select :date, class: "form-control",style:" width: 500px; " %>                                  </div>
+   </div>
+
+<div class="col-md-2 col-md-offset-5 actions" >
+   <%= f.submit "Aceptar", class:"btn btn-lg btn-success" %>
+       
+      </div> 
+  </fieldset>  
+<% end %>
+
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size: 25px;
+        color: #00C12B;
+    }
+</style>

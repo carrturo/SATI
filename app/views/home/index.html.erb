@@ -71,7 +71,30 @@
 	</div> 
 </div>
 	
-
+  
+	<section id="noticias" name="noticias"></section>
+  <div id="showcase">   
+   <div class="container">  
+    <div class="row centered">
+      <h1>Ultimas Noticias</h1>
+     <div class="col-sm-6 col-sm-offset-3">
+                <div class="blog">
+                  <% @news.each do |news| %>
+                  <br><br>
+                    <div class="blog-item">
+                      <%=cl_image_tag(news.picture, :alt => "imagen", width:"100%",class:"img-responsive img-blog") %>
+                      <h3><%= news.title %></h3>
+                        <div class="entry-meta">
+                          <span><i class="icon-calendar"></i><%= news.date %></span>
+                        </div>
+                      <%= link_to "Leer mas", news_path(news), class:"btn btn-success"%>
+                     </div>
+                  <% end %>
+               </div>
+    </div>   
+    </div>
+   </div>  
+ </div>    
 </div>    
 	
 

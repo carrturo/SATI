@@ -1,7 +1,7 @@
 class Actor < ActiveRecord::Base
   has_and_belongs_to_many :plays
   has_and_belongs_to_many :destrezas
-  validates :email, :uniqueness => { :case_sensitive => false, :message => "debe ser único." }
+  validates :email, :identity, :uniqueness => { :case_sensitive => false, :message => "debe ser único." }
   validates :facebook_profile, url: { :message => "no es válido. Formato: http://xxx.xxxxxx.xxx" }
   validates :name, :biography, :email, :presence => { :message => "es un campo obligatorio." }
   validates_format_of :name, :with => /[a-zA-Z\s(ñ)]+/, :message => "solo acepta letras."

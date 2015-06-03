@@ -618,5 +618,3 @@ var parallelism = (function($) { var _ = {
 			}
 
 }; return _; })(jQuery);
-
-parallelism.init();

@@ -1,4 +1,5 @@
 class News < ActiveRecord::Base
- mount_uploader :picture, PictureUploader
+  validates :title, :text, :presence => { :message => "es un campo obligatorio." }
+  mount_uploader :picture, PictureUploader
 end
 

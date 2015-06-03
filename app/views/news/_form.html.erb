@@ -3,7 +3,7 @@
  <fieldset> 
   <% if @news.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
+      <h2>Error al guardar Noticia</h2>
 
       <ul>
       <% @news.errors.full_messages.each do |message| %>

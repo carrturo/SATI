@@ -15,6 +15,8 @@ gem 'cloudinary'
 
 gem 'date_validator'
 
+gem 'devise'
+
 gem 'material_design_icons_rails', '~> 1.0.0'
 gem 'font-awesome-sass', '~> 4.3.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -49,7 +49,28 @@
                   <li> <%= link_to "Entrega de Ticket", ticket_surrender_path %></li>
                   
                 </ul>
-              </li>   
+              </li> 
+              <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"><spam  class="glyphicon glyphicon-user"></spam> Entra</a>
+          <div class="dropdown-menu pull-right" id="sign_in_form">
+            <%= form_for(:user, url: session_path(:user), html: { class: 'form-horizontal' }) do |f| %>
+            <div class="input-group row">
+              <span class="input-group-addon">@</span>
+              <%= f.text_field :email, class: 'form-control', placeholder: 'Correo' %>    
+            </div>
+            
+            <div class="input-group row">
+              <span class="input-group-addon"><i class="fa fa-key"></i></span>
+              <%= f.password_field :password, class: 'form-control', placeholder: 'Contraseña' %>    
+            </div>
+          
+            <div class="btn-group row">
+              <%= f.submit 'Entrar', class: 'btn btn-primary' %> 
+              <%= link_to "¿Has olvidado tu contraseña?", new_password_path(:user), class: 'btn btn-danger' %>
+            </div>
+            <% end %>
+          </div>  
+        </li>
            </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>

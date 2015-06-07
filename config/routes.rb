@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   resources :news
 
   resources :info_generals
-
+  
   get "new_reservation/:play_id", to: "ticket_reservations#new", as: "new_reservation"
- 
   
   resources :ticket_reservations
 

@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20150605202343) do
   end
 
   create_table "funcions", force: true do |t|
-    t.datetime "hora"
+    t.time     "hora"
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"

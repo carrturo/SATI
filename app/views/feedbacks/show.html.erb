@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @feedback.age %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @feedback.title %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @feedback.message %>
+</p>
+
+<p>
+  <strong>Fecha de Creación:</strong>
+  <%= @feedback.created_at.in_time_zone('Central America').strftime("%d/%h/%Y %H:%M") %>
+</p>
+
+
+<%= link_to 'Back', feedbacks_path %>

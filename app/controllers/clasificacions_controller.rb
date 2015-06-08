@@ -1,4 +1,5 @@
 class ClasificacionsController < ApplicationController
+  before_action :admin_signed_in
   before_action :set_clasificacion, only: [:show, :edit, :update, :destroy]
 
   # GET /clasificacions

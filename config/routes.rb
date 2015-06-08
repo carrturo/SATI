@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get '/ticket_found/:id', to: "ticket_reservations#ticket_found", as: "ticket_found"
   post '/ticket_found/:id', to: "ticket_reservations#ticket_found", as: "ticket_state"
   get '/ticketcstate/:id', to: "ticket_reservations#ticketcstate", as: "ticketcstate"
+  get '/admin/new_user', to: 'home#sign_up_new_user', as: "new_user"
+  post '/admin/create_user', to: 'home#create_user', as: "create_user"
   
   
 

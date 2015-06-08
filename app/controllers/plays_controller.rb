@@ -1,4 +1,5 @@
 class PlaysController < ApplicationController
+  before_action :admin_signed_in, except: [:playhistory, :cartelera, :show]
   before_action :set_play, only: [:show, :edit, :update, :destroy]
 
   # GET /plays

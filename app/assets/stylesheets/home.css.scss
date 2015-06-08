@@ -55,3 +55,16 @@ body {
       color: rgba(255, 255, 255, 0);
       background-color: rgba(255, 255, 255, 0);
     }
+
+#sign_in_form {
+  min-width: 330px;
+  padding: 10px;
+  
+  form {
+   padding: 20px;
+  }
+  
+  .row {
+    padding: 5px;
+  }
+}

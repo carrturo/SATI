@@ -1,4 +1,5 @@
 class TheatersController < ApplicationController
+  before_action :admin_signed_in
   before_action :set_theater, only: [:show, :edit, :update, :destroy]
 
   # GET /theaters

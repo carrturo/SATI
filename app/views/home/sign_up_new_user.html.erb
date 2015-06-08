@@ -18,7 +18,7 @@
 
 <%= form_for(@user, url: create_user_path, html: { class: 'form-horizontal'}) do |f| %>
 <fieldset>
-  <%= devise_error_messages! %>
+ 
 
   <div class="form-group">
        <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-envelope-o bigicon"></i><br>Correo*</span>
@@ -37,21 +37,18 @@
     </div>
 
   <div class="form-group">
-       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-key bigicon"></i><br>Confirmar contraseña*</span>
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-unlock-alt bigicon"></i><br>Confirmar contraseña*</span>
            <div class="col-md-8">
                <%= f.password_field :password_confirmation, autocomplete: "off" , class: "form-control",style:" width: 300px;" %>                  </div>
     </div>
   
  <div class="form-group">
-       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-key bigicon"></i><br>Rol*</span>
+       <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-user bigicon"></i><br>Rol*</span>
            <div class="col-md-8">
                <%= f.collection_select(:role_id, Role.all, :id, :name) %>                  </div>
     </div>
 
-  <div class="field">
-    <%= f.label :role %><br>
-    <%= f.collection_select(:role_id, Role.all, :id, :name) %>
-  </div>
+ 
 
    <div class="col-md-2 col-md-offset-5 actions" >
   <%= f.submit "Log in", class:"btn btn-lg btn-success" %>
@@ -59,5 +56,19 @@
       </div> 
 </fieldset>
 <% end %>
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
 
-
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size: 25px;
+        color: #00C12B;
+    }
+</style>

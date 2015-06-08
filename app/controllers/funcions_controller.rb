@@ -1,4 +1,5 @@
 class FuncionsController < ApplicationController
+  before_action :admin_signed_in
   before_action :set_funcion, only: [:show, :edit, :update, :destroy]
 
   # GET /funcions

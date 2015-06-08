@@ -1,4 +1,5 @@
 class GenerosController < ApplicationController
+  before_action :admin_signed_in
   before_action :set_genero, only: [:show, :edit, :update, :destroy]
 
   # GET /generos

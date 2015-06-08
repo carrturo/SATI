@@ -1,4 +1,6 @@
 class TicketReservationsController < ApplicationController
+  before_action :admin_signed_in, except: [:show,:new,:create, :ticket_surrender, :ticket_surrender_rev, :ticket_no_found, :ticket_found, :ticketcstate]
+  before_action :taquillero_signed_in, only: [:ticket_surrender, :ticket_surrender_rev, :ticket_no_found, :ticket_found, :ticketcstate]
   before_action :set_ticket_reservation, only: [:show, :edit, :update, :destroy]
 
   # GET /ticket_reservations

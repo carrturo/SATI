@@ -1,4 +1,5 @@
 class TipoTicketsController < ApplicationController
+  before_action :admin_signed_in
   before_action :set_tipo_ticket, only: [:show, :edit, :update, :destroy]
 
   # GET /tipo_tickets

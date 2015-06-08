@@ -1,4 +1,5 @@
 class InfoGeneralsController < ApplicationController
+  before_action :admin_signed_in, except: [:show]
   before_action :set_info_general, only: [:show, :edit, :update] #:destroy
 
   # GET /info_generals/1

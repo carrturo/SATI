@@ -1,4 +1,5 @@
 class ActorsController < ApplicationController
+  before_action :admin_signed_in, except: [:actorhistory, :show]
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
 
   # GET /actors

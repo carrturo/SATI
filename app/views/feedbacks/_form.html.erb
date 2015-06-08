@@ -1,7 +1,8 @@
-<%= form_for(@feedback) do |f| %>
+<%= form_for(@feedback, html: { class: 'form-horizontal'}) do |f| %>
+<fieldset>
   <% if @feedback.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+    <div id="error_explanation" style="align:center">
+      <h2>Error al enviar la Sugerencia</h2>
 
       <ul>
       <% @feedback.errors.full_messages.each do |message| %>
@@ -11,19 +12,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Age %><br>
-    <%= f.number_field :age %>
+  <div class="form-group">
+    <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-keyboard-o bigicon"></i>    <br>Edad*</span>
+    <div class="col-md-8">
+      <%= f.number_field :age , class: "form-control",style:" width: 500px;" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Title %><br>
-    <%= f.text_field :title %>
+  
+  <div class="form-group">
+    <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-user bigicon"></i><br>Título*</span>
+    <div class="col-md-8">
+      <%= f.text_field :title , autofocus: true , class: "form-control",style:" width: 500px;" %>                  
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :Message %><br>
-    <%= f.text_area :message %>
+  
+  <div class="form-group">
+    <span class="col-md-1 col-md-offset-3 text-center"><i class="fa fa-bars bigicon"></i>Mensaje*</span>
+      <div class="col-md-8">
+        <%= f.text_area :message, class: "form-control", style:" width: 500px; height:200px" %>       </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+  <br>
+  
+  <div class="col-md-2 col-md-offset-5 actions" >
+    <%= f.submit "Aceptar", class:"btn btn-lg btn-success" %>
   </div>
+  
+</fieldset>
+
 <% end %>
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size: 25px;
+        color: #00C12B;
+    }
+</style>

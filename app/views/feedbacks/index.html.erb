@@ -1,24 +1,45 @@
-<h1>Listar Sugerencias</h1>
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Sugerencias</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Sugerencias</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Age</th>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @feedbacks.each do |feedback| %>
-      <tr>
-        <td><%= feedback.age %></td>
-        <td><%= feedback.title %></td>
-        <td><%= link_to 'Show', feedback %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="jumbotron">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-success"> 
+      <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br></div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Edad </th>
+            <th>Título</th>
+            <th>Mostrar Mensaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @feedbacks.each do |feedback| %>
+          <tr>
+            <td><%= feedback.age %></td>
+            <td><%= feedback.title %></td>
+            <td><%= link_to 'Mostrar', feedback %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>   
+  </div>
+</div>
 
 <br>
 

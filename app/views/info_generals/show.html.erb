@@ -1,16 +1,34 @@
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Contactenos</h1>
+    </div>
+     <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Contactenos</li>
+      </ul>
+    </div>
+   </div>
+  </div>
+</section>
 <p id="notice"><%= notice %></p>
-<h1>Contactenos</h1>
-<p>
-  <strong>Nombre:</strong>
-  <%= @info_general.nombre %>
-</p>
-
-<p>
-  <strong>Direccion:</strong>
-  <%= @info_general.direccion %>
-</p>
-
-<div id="map"></div>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Nombre:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @info_general.nombre%></p>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Direccion:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @info_general.direccion%></p>
+    </div>
+  </div> 
+  <div id="map"></div>
 
 <script>
 
@@ -57,35 +75,44 @@
 
   });
 </script>
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Telefono:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @info_general.telefono%></p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Email:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @info_general.email%></p>
+    </div>
+  </div>
+  <h1>Redes Sociales</h1>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Facebook:</label>
+    <div class="col-sm-5">
+      <p class="form-control-static"><%= @info_general.fb%></p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Twitter:</label>
+    <div class="col-sm-5">
+      <p class="form-control-static"><%= @info_general.tw%></p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Youtube:</label>
+    <div class="col-sm-5">
+      <p class="form-control-static"><%= @info_general.youtube%></p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Instagram:</label>
+    <div class="col-sm-5">
+      <p class="form-control-static"><%= @info_general.ig%></p>
+    </div>
+  </div>
+</form>  
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @info_general.telefono %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @info_general.email %>
-</p>
-<h1>Redes Sociales</h1>
-<p>
-  <strong>Fb:</strong>
-  <%= @info_general.fb %>
-</p>
-
-<p>
-  <strong>Tw:</strong>
-  <%= @info_general.tw %>
-</p>
-
-<p>
-  <strong>Youtube:</strong>
-  <%= @info_general.youtube %>
-</p>
-
-<p>
-  <strong>Ig:</strong>
-  <%= @info_general.ig %>
-</p>
 
 <%= link_to 'Editar', edit_info_general_path(@info_general) %>

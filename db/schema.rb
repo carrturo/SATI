@@ -46,12 +46,25 @@ ActiveRecord::Schema.define(version: 20150608090853) do
     t.string   "state"
   end
 
+  create_table "clasificacions_plays", force: true do |t|
+    t.integer "clasificacion_id"
+    t.integer "play_id"
+  end
+
   create_table "destrezas", force: true do |t|
     t.string   "nombre"
     t.string   "comentario"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "state"
+  end
+
+  create_table "feedbacks", force: true do |t|
+    t.integer  "age"
+    t.string   "title"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "funcions", force: true do |t|
@@ -146,6 +159,11 @@ ActiveRecord::Schema.define(version: 20150608090853) do
     t.string   "state"
   end
 
+  create_table "ticket_reservations_tipo_tickets", force: true do |t|
+    t.integer "ticket_reservation_id"
+    t.integer "tipo_ticket_id"
+  end
+
   create_table "tipo_tickets", force: true do |t|
     t.string   "tipo"
     t.float    "precio"
@@ -156,19 +174,19 @@ ActiveRecord::Schema.define(version: 20150608090853) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "role_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

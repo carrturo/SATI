@@ -1,0 +1,45 @@
+<section id="title" class="emerald seccion1">
+  <br><br><br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Sugerencias</h1>
+    </div>
+     <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Sugerencias</li>
+      </ul>
+    </div>
+   </div>
+  </div>
+</section>
+<p id="notice"><%= notice %></p>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Age:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @feedback.age%></p>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Title:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @feedback.title%></p>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Message:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @feedback.message%></p>
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-sm-5 control-label">Fecha de Creacion:</label>
+    <div class="col-sm-3">
+      <p class="form-control-static"><%= @feedback.created_at.in_time_zone('Central America').strftime("%d/%h/%Y %H:%M") %></p>
+    </div>
+  </div> 
+</form>  
+
+<%= link_to 'Back', feedbacks_path %>

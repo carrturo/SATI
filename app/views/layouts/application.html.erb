@@ -34,7 +34,8 @@
 	            <li><%= link_to "Actores", actorhistory_path %></li>
               <li><a href="#quienessomos" class="smothscroll">¿Quienes somos?</a></li>
               <li><%= link_to "Cartelera", cartelera_path %></li>
-	           <li><a href="/info_generals/1" class="smothScroll">Contacto</a></li>              
+	           <li><a href="/info_generals/1" class="smothScroll">Contacto</a></li>
+              <li><%= link_to "Sugerencias", new_feedback_path %></li>
            </ul>
             <% end %>
             
@@ -46,7 +47,8 @@
 	            <li><%= link_to "Actores", actorhistory_path %></li>
               <li><a href="#quienessomos" class="smothscroll">¿Quienes somos?</a></li>
               <li><%= link_to "Cartelera", cartelera_path %></li>
-	           <li><a href="info_generals/1" class="smothScroll">Contacto</a></li>              
+	           <li><a href="info_generals/1" class="smothScroll">Contacto</a></li>
+              <li><%= link_to "Sugerencias", new_feedback_path %></li>
            </ul>
             
             <ul class="nav navbar-nav">
@@ -63,6 +65,7 @@
                   <li> <%= link_to "Teatros", theaters_path %></li>
                   <li> <%= link_to "Noticias", news_index_path %></li>
                   <li> <%= link_to "Crear usuario", new_user_path %></li>
+                  <li> <%= link_to "Ver sugerencias", feedbacks_path %></li>
                 </ul>
               </li>
             </ul>

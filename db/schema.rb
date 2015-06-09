@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 20150608090853) do
     t.string   "state"
   end
 
+  create_table "feedbacks", force: true do |t|
+    t.integer  "age"
+    t.string   "title"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "funcions", force: true do |t|
     t.datetime "hora"
     t.string   "comentario"

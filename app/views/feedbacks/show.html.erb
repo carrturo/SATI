@@ -15,31 +15,45 @@
   </div>
 </section>
 
+<br>
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="col-sm-5 control-label">Age:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @feedback.age%></p>
+    <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-keyboard-o bigicon"></i>    <br>Edad:</span>
+    <div class="col-md-2">
+      <h3><%= @feedback.age%></h3>
     </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Title:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @feedback.title%></p>
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Message:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @feedback.message%></p>
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Fecha de Creacion:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @feedback.created_at.in_time_zone('Central America').strftime("%d/%h/%Y %H:%M") %></p>
-    </div>
-  </div> 
+  </div>
+  <br>
+   <div class="form-group">
+    <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-bars bigicon"></i>Mensaje:</span>
+      <div class="col-md-2">
+        <h3><%= @feedback.message%></h3>  
+      </div>
+  </div>
+ <br>
+   <div class="form-group">
+    <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-calendar bigicon"></i><br>Fecha de envio:</span>
+      <div class="col-md-2">
+        <h3><%= @feedback.created_at.in_time_zone('Central America').strftime("%d/%h/%Y %H:%M") %></h3>  
+      </div>
+  </div>
+  
+  
 </form>  
 
-<%= link_to 'Back', feedbacks_path %>
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+   span{
+   font-size:17px;
+  color:black;
+ }  
+    .bigicon {
+        font-size:45px;
+        color: #00C12B;
+    }
+</style>

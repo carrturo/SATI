@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  get 'reportes/consult'
+  get 'reportes/show'
+  post 'reportes/show'
+  #resources :reportes, :collection => {:consult => :get, :show => :post}
+  
   resources :feedbacks
 
   devise_for :users

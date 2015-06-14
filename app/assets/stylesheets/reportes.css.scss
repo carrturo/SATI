@@ -1,0 +1,69 @@
+// Place all the styles related to the Reportes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.QueryColumn{
+  width: 33%;
+  min-width: 350px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.centered{
+  margin: 0px auto;
+	float: none;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.DisplayInfo{
+  margin: 0px auto;
+	float: none;
+  margin-top: 5%;
+}
+
+.DisplayInfo p{
+  float: left;
+  margin-left: 3%;
+  font-size: 15px;
+}
+
+.DisplayInfo select{
+  float: right;
+  margin-right: 3%;
+}
+
+.lastInput {
+  margin-bottom: 5%;
+}
+
+.clear{
+  clear: both;
+}
+
+.inputCentered{
+  margin-top: 3%;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94% !important;
+}
+
+#unikeStile{
+  
+    margin-top: 5%;
+}
+
+#ActorsColumn{
+  margin-bottom:100px;
+}
+
+#PlaysColumn{
+  margin-bottom:9px;
+}
+
+#TeatherColumn{
+    margin-bottom:147px;
+}

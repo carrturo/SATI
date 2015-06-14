@@ -1,0 +1,155 @@
+<h1> Consultas </h1>
+
+<div class="form-group centered">
+  <%= form_tag '/reportes/show' do %>
+  <section class="QueryColumn">
+    <section class="panel panel-success">
+      <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br></div> 
+
+      <h2> Actores </h2>
+
+      <div class="DisplayInfo">
+        <p>Destrezas:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="actorsDestrezas">
+          <option value="0">Todo</option>
+          <% @Destrezas.each do |destrezas| %>
+          <option value="<%= destrezas.nombre %>"><%= destrezas.nombre %></option>
+          <% end %>
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <div class="DisplayInfo">
+        <p>Género:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="actorsGenders">
+          <option value="0">Todo</option>
+          <option value="1">Masculino</option>
+          <option value="2">Femenino</option>
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <div class="DisplayInfo">
+        <p>Estado:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="actorsStates">
+          <option value="0">Todo</option>
+          <option value="1">Activo</option>
+          <option value="2">Inactivo</option>
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <input type="text" name="actorsName" id="subject" class="inputCentered form-control" placeholder="Nombre">
+
+      <div id="ActorsColumn" class="DisplayInfo">
+        <input type="radio" name="orderBy" value="ByActors"> Filtrar por Actores
+        <div class="clear"></div>
+      </div>
+
+    </section>
+  </section>
+
+  <section class="QueryColumn">
+    <section class="panel panel-success"> 
+      <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br>
+      </div> 
+
+      <h2> Obras </h2>
+
+      <div class="DisplayInfo">
+        <p>Clasificación:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="playsClasificacionId">
+          <option value="0">Todo</option>
+          <% @Clasificaciones.each do |clasificacion| %>
+          <option value="<%= clasificacion.id %>"><%= clasificacion.nombre %></option>
+          <% end %>  
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <div class="DisplayInfo">
+        <p>Géneros:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="playsGeneros">
+          <option value="0">Todo</option>
+          <% @Generos.each do |generos| %>
+          <option value="<%= generos.id %>"><%= generos.nombre %></option>
+          <% end %>  
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <div class="DisplayInfo">
+        <p>Estado:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="playsState">
+          <option value="0">Todo</option>
+          <option value="1">Exhibición</option>
+          <option value="2">Fuera</option>
+          <option value="3">Retirada</option>
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <div id="unikeStile">
+        <input type="radio" name="playsRadio" value="up"> Mayor
+        <input type="radio" name="playsRadio" value="equals" checked> Igual
+        <input type="radio" name="playsRadio" value="down"> Menor
+      </div>
+
+      <input type="text" name="playsDuracion" id="subject" class="inputCentered form-control" placeholder="Duración">
+
+      <input type="text" name="playNombre" id="subject" class="inputCentered form-control" placeholder="Nombre">
+
+      <div id="PlaysColumn" class="DisplayInfo">
+        <input type="radio" name="orderBy" value="ByPlay"> Filtrar por Obras
+        <div class="clear"></div>
+      </div>
+
+    </section>               
+  </section>
+
+  <section class="QueryColumn">
+    <section class="panel panel-success">
+      <div class="panel-heading" style=" color: black; background-color: #00C12B; border-color: #d6e9c6;"><br></div> 
+
+      <h2> Teatro </h2>
+
+      <div class="DisplayInfo">
+        <p>Capacidad:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="theatersCapacity">
+          <option value="0">Todo</option>
+          <% @Teatros.each do |teatro| %>
+          <option value="<%= teatro.id %>"><%= teatro.capacity %></option>
+          <% end %>
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <div class="DisplayInfo">
+        <p>Estado:</p>
+        <select class="selectpicker show-menu-arrow show-tick" data-live-search="true" data-width="32.7%" name="theatersState">
+          <option value="0">Todo</option>
+          <option value="1">Activo</option>
+          <option value="2">Inactivo</option>
+        </select>
+        <div class="clear"></div>
+      </div>
+
+      <input type="text" name="theaterNombre" id="subject" class="inputCentered form-control" placeholder="Nombre">
+
+      <div id="TeatherColumn" class="DisplayInfo">
+        <input type="radio" name="orderBy" value="ByTeather"> Filtrar por Teatro
+        <div class="clear"></div>
+      </div>
+
+    </section>
+  </section>
+
+  <div class="clear"></div>
+
+  <div class="col-md-2 col-md-offset-5 actions">
+    <%= submit_tag 'Save' %>
+  </div>
+
+  <% end %>
+
+  </div>

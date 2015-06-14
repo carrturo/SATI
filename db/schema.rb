@@ -46,11 +46,6 @@ ActiveRecord::Schema.define(version: 20150608090853) do
     t.string   "state"
   end
 
-  create_table "clasificacions_plays", force: true do |t|
-    t.integer "clasificacion_id"
-    t.integer "play_id"
-  end
-
   create_table "destrezas", force: true do |t|
     t.string   "nombre"
     t.string   "comentario"
@@ -157,11 +152,6 @@ ActiveRecord::Schema.define(version: 20150608090853) do
     t.datetime "date"
     t.string   "token"
     t.string   "state"
-  end
-
-  create_table "ticket_reservations_tipo_tickets", force: true do |t|
-    t.integer "ticket_reservation_id"
-    t.integer "tipo_ticket_id"
   end
 
   create_table "tipo_tickets", force: true do |t|

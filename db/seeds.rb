@@ -10,7 +10,7 @@ admin_user = User.where(email: "admin@sati.hn").first
 admin_user = User.create(email: "admin@sati.hn", password: "admin123") if admin_user.nil?
 
 taqui_user = User.where(email: "taquillero@sati.hn").first
-taqui_user = User.create(email: "taquillero@sati.hn", password: "taqui123") if admin_user.nil?
+taqui_user = User.create(email: "taquillero@sati.hn", password: "taqui123") if taqui_user.nil?
 
 admin_role = Role.where(name: "admin").first
 admin_role = Role.create(name: "admin") if admin_role.nil?
@@ -21,7 +21,7 @@ taquillero_role = Role.create(name: "taquillero") if taquillero_role.nil?
 admin_user.role = admin_role
 admin_user.save
 
-taqui_user.role = admin_role
+taqui_user.role = taquillero_role
 taqui_user.save
 
 genero1 = Genero.where(nombre: "Comedia").first

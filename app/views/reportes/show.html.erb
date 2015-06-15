@@ -1,2 +1,105 @@
-<h1>Reportes#show</h1>
+<section id="title" class="emerald seccion1">
+  <br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-6">
+      <h1>Resultado</h1>
+    </div>
+    <div class="col-sm-6">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Reporte</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+<h3><%=@tituloReporte %></h3>
+<% if @filtroPor == "actor" %>
+<table class="table table-striped ", style="width:96%">
+  <tbody>
+    <tr>
+      <th><b>Nombre</b></th>
+      <th><b>Genero</b></th>
+      <th><b>Estado</b></th>
+      <th><b>Identidad</b></th>
+      <th><b>e-mail</b></th> 
+    </tr>
+    <% @actoresFinal.each do |actor| %>
+    <tr>
+      <td> <%=actor.name %></td>
+      <td> <%=actor.gender %></td>
+      <td> <%=actor.state %></td>
+      <td> <%=actor.identity %></td>
+      <td> <%=actor.email %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
 
+<% if @filtroPor == "play" %>
+<table class="table table-striped ", style="width:96%">
+  <tbody>
+    <tr>
+      <th><b>Título</b></th>
+      <th><b>Estado</b></th>
+      <th><b>Duración</b></th>
+      <th><b>Fin de exhibición</b></th>
+
+    </tr>
+    <% @obrasFinal.each do |obra| %>
+    <tr>
+      <td> <%=obra.title %></td>
+      <td> <%=obra.state %></td>
+      <td> <%=obra.duration %></td>
+      <td> <%=obra.end_date %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+<% if @filtroPor == "theater" %>
+<table class="table table-striped ", style="width:96%">
+  <tbody>
+    <tr>
+      <th><b>Nombre</b></th>
+      <th><b>Estado</b></th>
+      <th><b>Capacidad</b></th>
+      <th><b>Direccion</b></th>
+    </tr>
+    <% @teatrosFinal.each do |teatro| %>
+    <tr>
+      <td> <%=teatro.name %></td>
+      <td> <%=teatro.state %></td>
+      <td> <%=teatro.capacity %></td>
+      <td> <%=teatro.address %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+<style>
+  h3{
+    background-color: #303F9F;
+    color: white;
+    margin-top: 0;
+    
+  }
+  th {
+    text-align: center;
+    background-color: #00C12B;
+    color: white;
+  }
+  table, th, td {
+    border: 1px solid green;
+  }
+
+  table{
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+</style>

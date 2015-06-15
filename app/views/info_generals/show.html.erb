@@ -1,17 +1,17 @@
 <section id="title" class="emerald seccion1">
   <br><br><br><br>
- <div class="container">
-   <div class="row">
-    <div class="col-sm-6">
-      <h1>Contactenos</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Contactenos</h1>
+      </div>
+      <div class="col-sm-6">
+        <ul class="breadcrumb pull-right">
+          <li><%= link_to 'Inicio', root_path %></li>
+          <li class="active">Contactenos</li>
+        </ul>
+      </div>
     </div>
-     <div class="col-sm-6">
-      <ul class="breadcrumb pull-right">
-        <li><%= link_to 'Inicio', root_path %></li>
-        <li class="active">Contactenos</li>
-      </ul>
-    </div>
-   </div>
   </div>
 </section>
 <p id="notice"><%= notice %></p>
@@ -28,53 +28,54 @@
       <p class="form-control-static"><%= @info_general.direccion%></p>
     </div>
   </div> 
-  <div id="map"></div>
+  <div id="map">
+    <script>
 
-<script>
+      var mapOptions =
 
-  var mapOptions =
+          {
 
-      {
+            center: new google.maps.LatLng(14.077476,-87.215951),
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
 
-        center: new google.maps.LatLng(14.077476,-87.215951),
-        zoom: 16,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
 
-      };
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      var markerOptions =
 
-  var markerOptions =
+          {
 
-      {
+            position: new google.maps.LatLng(14.077476, -87.215951),
+            title: "ArtMemola"
 
-        position: new google.maps.LatLng(14.077476, -87.215951),
-        title: "ArtMemola"
+          };
 
-      };
+      var marker = new google.maps.Marker(markerOptions);
 
-  var marker = new google.maps.Marker(markerOptions);
+      marker.setMap(map);
 
-  marker.setMap(map);
+      var infoWindowOptions =
 
-  var infoWindowOptions =
+          {
 
-      {
+            content: '<IMG BORDER="0" name="slide" ALIGN="Left" SRC="/assets/artlogo.jpg">'
 
-        content: '<IMG BORDER="0" name="slide" ALIGN="Left" SRC="/assets/artlogo.jpg">'
+          };
 
-      };
+      var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
 
-  var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+      google.maps.event.addListener(marker,'click',function(e)
 
-  google.maps.event.addListener(marker,'click',function(e)
+                                    {
 
-                                {
+        infoWindow.open(map, marker);
 
-    infoWindow.open(map, marker);
+      });
+    </script>
+  </div>
 
-  });
-</script>
   <div class="form-group">
     <label class="col-sm-5 control-label">Telefono:</label>
     <div class="col-sm-3">

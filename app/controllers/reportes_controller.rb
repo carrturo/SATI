@@ -1,4 +1,5 @@
 class ReportesController < ApplicationController
+  
   def show
 
     @filtroPor = ""
@@ -14,12 +15,12 @@ class ReportesController < ApplicationController
 
     if params[:playNombre].present? && !(params[:playNombre].empty?)
       @obrasClauses << " AND title = '" << params[:playNombre] << "'"
-      @tituloReporte << "Nombre de Obra,"
+      @tituloReporte << "Nombre de Obra:"<< params[:playNombre] << ","
     end
 
     if params[:playsState].present? && params[:playsState] != '0'
       @obrasClauses << " AND state = '" << params[:playsState] << "'"
-      @tituloReporte << "Estado de Obra,"
+      @tituloReporte << "Estado de Obra:"<< params[:playsState] << ","
     end
 
 
@@ -28,74 +29,77 @@ class ReportesController < ApplicationController
       if !(params[:playsDuracion].empty?)
         if params[:playsRadio] == "up"
           @obrasClauses << " AND duration > '" << params[:playsDuracion] << "'"
-          @tituloReporte << "Duración de Obra (Mayor que),"
+          @tituloReporte << "Duración de Obra (Mayor que):"<< params[:playsDuracion] << ","
         end
         if params[:playsRadio] == "equals"
           @obrasClauses << " AND duration = '" << params[:playsDuracion] << "'"
-          @tituloReporte << "Duración de Obra (Igual a),"
+          @tituloReporte << "Duración de Obra (Igual a):"<< params[:playsDuracion] << ","
+
         end
         if params[:playsRadio] == "down"
           @obrasClauses << " AND duration < '" << params[:playsDuracion] << "'"
-          @tituloReporte << "Duración de Obra (Menor que),"
+          @tituloReporte << "Duración de Obra (Menor que):"<< params[:playsDuracion] << ","
+
         end
       end
     end
 
     if params[:playsClasificacion].present? && params[:playsClasificacion] != '0'
+      @clasificacion = Clasificacion.find_by_id(params[:playsClasificacion].to_s)
       @obrasClauses << " AND clasificacion_id = '" << params[:playsClasificacion] << "'"
-      @tituloReporte << "Clasificación de Obra,"
+      @tituloReporte << "Clasificación de Obra:"<<"#{@clasificacion.nombre}"<<","
     end
 
     if params[:actorsName].present? && !(params[:actorsName].empty?)
       @actoresClauses << " AND name = '" << params[:actorsName] << "'"
-      @tituloReporte << "Nombre de actor,"
+      @tituloReporte << "Nombre de actor:" << params[:actorsName] << ","
     end
 
     if params[:actorsGenders].present? && params[:actorsGenders] != '0'
       @actoresClauses << " AND gender = '" << params[:actorsGenders] << "'"
-      @tituloReporte << "Genero de Actor,"
+      @tituloReporte << "Genero de Actor:" << params[:actorsGenders] << ","
     end
 
     if params[:actorsStates].present? && params[:actorsStates] != '0'
       @actoresClauses << " AND state = '" << params[:actorsStates] << "'"
-      @tituloReporte << "Estado de actor,"
+      @tituloReporte << "Estado de actor:"<< params[:actorsStates]<< ","
     end
 
     if params[:theaterNombre].present? && !(params[:theaterNombre].empty?)
       @teatroClauses << " AND name = '" << params[:theaterNombre] << "'"
-      @tituloReporte << "Nombre de teatro,"
+      @tituloReporte << "Nombre de teatro:"<< params[:theaterNombre] << ","
     end
 
     if params[:theaterRadio].present? && params[:theatersCapacity].present?
       if !(params[:theatersCapacity].empty?)
         if params[:theaterRadio] == "up"
           @teatroClauses << " AND capacity > '" << params[:theatersCapacity] << "'"
-          @tituloReporte << "Capacidad de teatro (Mayor que),"
+          @tituloReporte << "Capacidad de teatro (Mayor que):"<< params[:theatersCapacity] << ","
         end
         if params[:theaterRadio] == "equals"
           @teatroClauses << " AND capacity = '" << params[:theatersCapacity] << "'"
-          @tituloReporte << "Capacidad de teatro (Igual a),"
+          @tituloReporte << "Capacidad de teatro (Igual a):"<< params[:theatersCapacity] << ","
         end
         if params[:theaterRadio] == "down"
           @teatroClauses << " AND capacity < '" << params[:theatersCapacity] << "'"
-          @tituloReporte << "Capacidad de teatro (Menor que),"
+          @tituloReporte << "Capacidad de teatro (Menor que):"<< params[:theatersCapacity] << ","
         end
       end
     end
 
     if params[:theatersState].present? && params[:theatersState] != '0'
       @teatroClauses << " AND state = '" << params[:theatersState] << "'"
-      @tituloReporte << "Estado de teatro,"
+      @tituloReporte << "Estado de teatro:"<< params[:theatersState] << ","
     end
 
     if params[:playsGeneros].present? && params[:playsGeneros] != '0'
       @genero = Genero.find_by_id(params[:playsGeneros].to_s)
-      @tituloReporte << "Genero de obra,"
+      @tituloReporte << "Genero de obra:" << "#{@genero.nombre}" << ","
     end
 
     if params[:actorsDestrezas].present? && params[:actorsDestrezas] != '0'
       @destreza = Destreza.find_by_id(params[:actorsDestrezas].to_s)
-      @tituloReporte << "Destreza de actor,"
+      @tituloReporte << "Destreza de actor:"<<"#{@destreza.nombre}"<<","
     end
 
     @actoresFiltro = Actor.where(@actoresClauses)
@@ -112,8 +116,8 @@ class ReportesController < ApplicationController
     if params[:orderBy].present?
       if params[:orderBy].to_s == "ByActors"
 
-       # @tituloReporte =
-        
+        # @tituloReporte =
+
         @filtroPor = "actores"
 
         @ObrasPorTeatro = Array.new
@@ -302,7 +306,7 @@ class ReportesController < ApplicationController
         @teatrosFinal = @teatrosFinal.uniq
       end
     end
-    @tituloReporte << "\n Filtrado por: #{@filtroPor}"
+    @radioFilter = " Filtrado por: #{@filtroPor}"
   end
 
   def consult

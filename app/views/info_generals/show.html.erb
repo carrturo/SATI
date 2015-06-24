@@ -156,6 +156,17 @@
 <% if user_signed_in? && current_user.role.name == 'admin'%>
 <%= link_to 'Editar', edit_info_general_path(@info_general), class:"btn btn-success" %>
 <% end %>
+<br><br>
+<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    © 2015 <a target="_blank" href="http://wildpro.co/">WildPro</a>. All Rights Reserved.
+                </div>
+               
+            </div>
+        </div>
+    </footer>
 <style>
   strong {
     color: black;

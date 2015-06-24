@@ -10,6 +10,10 @@ class HomeController < ApplicationController
     @user = User.new
   end
   
+  def about
+  
+  end  
+  
   def create_user
     @user = User.new(user_params)
     

@@ -4,7 +4,9 @@
 				<div id="sidebar">
 					<div class="sosmed">
 						<div class="text-center">
-							<a href="#"><i class="fa fa-facebook fa-2x" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"></i></a>
+              <%= link_to @actor.facebook_profile do %>
+                <i class="fa fa-facebook fa-2x" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"></i>
+              <% end %>
               <a href="#"><i class="fa fa-envelope-o fa-2x" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"></i></a>
 						</div>
 					</div>
@@ -70,7 +72,7 @@
 					       
 					        <!-- start:blog -->
 					        <li id="id-blog">
-					        	<div class="timeline-badge default"><i class="fa fa-comments" data-original-title="" title=""></i></div>
+					        	<div class="timeline-badge default"><i class="fa fa-building-o" data-original-title="" title=""></i></div>
 					        	<h1 class="timeline-head">OBRAS</h1>
 					        </li>
                      <% @actor.plays.each do |play| %>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'    type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASMfL_cmXqC07wIvDNgu9ylbx6NSuNPk4"></script>
   <title>SATI</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -32,9 +33,9 @@
 	            <li class="active"><%= link_to 'Inicio', root_path, class:'smothScroll' %></li>
               <li><%= link_to "Obras",playhistory_path %></li>
 	            <li><%= link_to "Actores", actorhistory_path %></li>
-              <li><a href="#quienessomos" class="smothscroll">¿Quienes somos?</a></li>
+              <li><%= link_to "Quienes somos", about_path %></li>
               <li><%= link_to "Cartelera", cartelera_path %></li>
-	          <li><a href="/info_generals/1" class="smothScroll">Contacto</a></li>
+              <li><%= link_to "Contacto", InfoGeneral.first %></li>
               <li><%= link_to "Sugerencias", new_feedback_path %></li>
            </ul>
             <% end %>
@@ -45,9 +46,9 @@
 	            <li class="active"><%= link_to 'Inicio', root_path, class:'smothScroll' %></li>
               <li><%= link_to "Obras",playhistory_path %></li>
 	            <li><%= link_to "Actores", actorhistory_path %></li>
-              <li><a href="#quienessomos" class="smothscroll">¿Quienes somos?</a></li>
+              <li><%= link_to "Quienes somos", about_path %></li>
               <li><%= link_to "Cartelera", cartelera_path %></li>
-	           <li><a href="info_generals/1" class="smothScroll">Contacto</a></li>
+	            <li><%= link_to "Contacto", InfoGeneral.first %></li>
               <li><%= link_to "Sugerencias", new_feedback_path %></li>
            </ul>
             

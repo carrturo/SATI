@@ -2,10 +2,13 @@
   <br><br><br><br>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
-        <h1>Contactenos</h1>
-      </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4" style="padding-left: 0px;padding-right: 0px;">
+      <h1>Contactenos</h1> 
+    </div>
+     <div class="col-sm-1">
+       <%= image_tag 'lentes.png' , size:'100x105', style:"padding-bottom:45px"%>
+    </div>
+      <div class="col-sm-7">
         <ul class="breadcrumb pull-right">
           <li><%= link_to 'Inicio', root_path %></li>
           <li class="active">Contactenos</li>
@@ -13,107 +16,149 @@
       </div>
     </div>
   </div>
-</section>
-<p id="notice"><%= notice %></p>
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Nombre:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @info_general.nombre%></p>
-    </div>
-  </div> 
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Direccion:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @info_general.direccion%></p>
-    </div>
-  </div> 
-  <div id="map">
-    <script>
-
-      var mapOptions =
-
-          {
-
-            center: new google.maps.LatLng(14.077476,-87.215951),
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-
-          };
-
-      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-      var markerOptions =
-
-          {
-
-            position: new google.maps.LatLng(14.077476, -87.215951),
-            title: "ArtMemola"
-
-          };
-
-      var marker = new google.maps.Marker(markerOptions);
-
-      marker.setMap(map);
-
-      var infoWindowOptions =
-
-          {
-
-            content: '<IMG BORDER="0" name="slide" ALIGN="Left" SRC="/assets/artlogo.jpg">'
-
-          };
-
-      var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-
-      google.maps.event.addListener(marker,'click',function(e)
-
-                                    {
-
-        infoWindow.open(map, marker);
-
-      });
-    </script>
+</section><br>
+<div class="row">
+  <div class="col-md-2">
+  <div class="row">
+    <%= image_tag 'caras.png'%>  
   </div>
+  <div class="row">
+    <%= image_tag 'telon.png'%>  
+  </div>
+  <div class="row">
+    <%= image_tag 'flores.png'%>  
+  </div>  
+  </div>
+  <div class="col-md-8">
+    <div class="panel panel-default" style="border-radius:10px">
+      <div class="panel-body">
+        <div class="row">
+         <div class="col-md-1"></div>
+          <div id="map" class="col-md-5">
+        <script>
 
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Telefono:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @info_general.telefono%></p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-5 control-label">Email:</label>
-    <div class="col-sm-3">
-      <p class="form-control-static"><%= @info_general.email%></p>
-    </div>
-  </div>
-  <h1>Redes Sociales</h1>
-  <div class="form-group">
-    <label class="col-sm-4 control-label">Facebook:</label>
-    <div class="col-sm-5">
-      <p class="form-control-static"><%= @info_general.fb%></p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-4 control-label">Twitter:</label>
-    <div class="col-sm-5">
-      <p class="form-control-static"><%= @info_general.tw%></p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-4 control-label">Youtube:</label>
-    <div class="col-sm-5">
-      <p class="form-control-static"><%= @info_general.youtube%></p>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-4 control-label">Instagram:</label>
-    <div class="col-sm-5">
-      <p class="form-control-static"><%= @info_general.ig%></p>
-    </div>
-  </div>
-</form>  
+          var mapOptions =
 
+              {
 
-<%= link_to 'Editar', edit_info_general_path(@info_general) %>
+                center: new google.maps.LatLng(14.077476,-87.215951),
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+
+              };
+
+          var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+          var markerOptions =
+
+              {
+
+                position: new google.maps.LatLng(14.077476, -87.215951),
+                title: "ArtMemola"
+
+              };
+
+          var marker = new google.maps.Marker(markerOptions);
+
+          marker.setMap(map);
+
+          var infoWindowOptions =
+
+              {
+
+                content: '<IMG BORDER="0" name="slide" ALIGN="Left" SRC="/assets/artlogo.jpg">'
+
+              };
+
+          var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+
+          google.maps.event.addListener(marker,'click',function(e)
+
+                                        {
+
+            infoWindow.open(map, marker);
+
+          });
+        </script>
+      </div>
+
+         <div class="col-md-6">
+           <%= image_tag 'logo_trans.png', size: '150x100' %>  
+           <br>
+            <h4><strong>Direccion:</strong> <%=@info_general.direccion %></h4>
+           <br>
+            <h4><strong>Telefono:</strong> <%= @info_general.telefono %></h4>
+           <br>
+            <h4><strong>Email:</strong> <%= @info_general.email%></h4>
+           <br>
+          <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <div class="media">
+                        <div class="pull-left icon-md">
+                          <%= link_to @info_general.ig do %>
+                            <i class="fa fa-instagram"></i>
+                          <% end %>
+                        </div>
+                       </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-1">
+                    <div class="media">
+                        <div class="pull-left icon-md">
+                          <%= link_to @info_general.fb do %>
+                            <i class=" fa fa-facebook"></i>
+                          <% end %>
+                        </div>
+                       
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-1">
+                    <div class="media">
+                        <div class="pull-left icon-md">
+                          <%= link_to @info_general.youtube do %>
+                            <i class="fa fa-youtube-square"></i>
+                          <% end %>
+                        </div>
+                       
+                    </div>
+                </div><!--/.col-md-4-->
+                <div class="col-md-1">
+                    <div class="media">
+                        <div class="pull-left icon-md">
+                          <%= link_to @info_general.tw do %>
+                            <i class="fa fa-twitter"></i>
+                          <% end %>
+                        </div>
+                       
+                    </div>
+                </div><!--/.col-md-4-->
+            </div>
+        </div>
+    </section>
+         </div>
+       </div>   
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+  <div class="row">
+    <%= image_tag 'manos.png'%>  
+  </div>
+  <div class="row">
+    <%= image_tag 'ticket.png'%>  
+  </div>
+  <div class="row">
+    <%= image_tag 'mascara.png'%>  
+  </div>
+  </div>
+</div>
+
+<% if user_signed_in? && current_user.role.name == 'admin'%>
+<%= link_to 'Editar', edit_info_general_path(@info_general), class:"btn btn-success" %>
+<% end %>
+<style>
+  strong {
+    color: black;
+  }
+</style>

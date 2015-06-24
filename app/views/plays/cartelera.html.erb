@@ -2,10 +2,13 @@
   <br><br><br><br>
  <div class="container">
    <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-1">
       <h1>Cartelera</h1>
     </div>
-    <div class="col-sm-6">
+      <div class="col-sm-2">
+        <%= image_tag 'cartelera.png', size:'80x80', style:"padding-bottom:30px" %>
+    </div>
+    <div class="col-sm-9">
       <ul class="breadcrumb pull-right">
         <li><%= link_to 'Inicio', root_path %></li>
         <li class="active">Obras</li>
@@ -17,34 +20,39 @@
 <br><br>
 
 <% @plays.each do |play|%>
-  <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-  <div class="col-md-7">
-    
-    <% if play.picture.to_s.empty? %>
-      <a href="#">
-       <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-      </a>
-    <% else %>
-     <%= cl_image_tag(play.picture, :alt => "imagen", :width => 625, :height =>300) %>
-    <%  end %>
-    
+<div class="col-md-10 col-md-offset-1">
+  <div class="panel panel-default" style="border-radius:20px">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-7">
+
+        <% if play.picture.to_s.empty? %>
+          <a href="#">
+           <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+          </a>
+        <% else %>
+         <%= cl_image_tag(play.picture, :alt => "imagen", :width => 450, :height =>300) %>
+        <%  end %>
+
+      </div>
+
+      <div class="col-md-5">
+        <h3><%= play.title %></h3>
+        <br>
+        <p style="text-align:justify"><%= play.summary %></p>
+        <br>
+        <%= play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %>
+        <br><br>
+        <%= link_to play ,class:"btn btn-success" do  %>
+            Ver Obra<span class="glyphicon glyphicon-chevron-right"></span>    
+        <% end %>
+
+        <%= link_to new_reservation_path(play.id), class: "btn btn-success" do %>
+          Reservar<span class="glyphicon glyphicon-chevron-right"></span>
+        <% end %>
+      </div>  
+     </div>   
+    </div>
   </div>
-  
-  <div class="col-md-5">
-    <h3><%= play.title %></h3>
-    <br>
-    <p style="text-align:justify"><%= play.summary %></p>
-    <br>
-    <%= play.funcions.map { |funcion| funcion.hora.strftime("%H:%M") }.join(' | ') %>
-    <br><br>
-   <a class="btn btn-success" href="#">Ver Obra<span class="glyphicon glyphicon-chevron-right"></span></a>
-    <%= link_to new_reservation_path(play.id), class: "btn btn-success" do %>
-      Reservar<span class="glyphicon glyphicon-chevron-right"></span>
-    <% end %>
-  </div>  
- </div>   
 </div>
-<hr>
-<br>
 <% end %>

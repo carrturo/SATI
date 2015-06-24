@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_action :admin_signed_in
+  before_action :admin_signed_in, except: [:recentindex,:show]
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   # GET /news
@@ -7,7 +7,11 @@ class NewsController < ApplicationController
   def index
     @news = News.all
   end
-
+  
+  def recentindex
+    @news = News.limit(5)
+  end
+  
   # GET /news/1
   # GET /news/1.json
   def show

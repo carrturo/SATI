@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   get '/admin/new_user', to: 'home#sign_up_new_user', as: "new_user"
   post '/admin/create_user', to: 'home#create_user', as: "create_user"
   get '/about', to: "home#about", as:"about"
+  get '/recentnews', to: "news#recentindex", as: "recentnews"
   
 
   # The priority is based upon order of creation: first created -> highest priority.

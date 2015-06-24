@@ -1,0 +1,49 @@
+<section id="title" class="emerald seccion1">
+  <br><br>
+ <div class="container">
+   <div class="row">
+    <div class="col-sm-3">
+      <h1>Noticias</h1>
+    </div>
+     <div class="col-sm-2">
+       <%= image_tag 'micro.png' , size:'80x100', style:"padding-bottom:30px"%>
+    </div>
+    <div class="col-sm-7">
+      <ul class="breadcrumb pull-right">
+        <li><%= link_to 'Inicio', root_path %></li>
+        <li class="active">Noticias</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+<br><br>
+
+<% @news.each do |news|%>
+<div class="col-md-10 col-md-offset-1">
+  <div class="panel panel-default" style="border-radius:20px">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <%= cl_image_tag(news.picture, :alt => "imagen", :width => 350, :height =>250, class:"img-rounded") %>
+      </div>
+      
+      <div class="col-md-5">
+        <h2><%= news.title %></h2>
+          <br>
+        <p>
+        <i class="fa fa-calendar fa-2x" data-original-title="" title=""></i>
+                           <%= news.date%>                        
+         </p> 
+        <br>
+          <%= link_to news ,class:"btn btn-success" do  %>
+            Ver Noticia<span class="glyphicon glyphicon-chevron-right"></span>    
+          <% end %>
+
+      </div>  
+     </div>   
+    </div>
+  </div>
+</div>
+<% end %>
+
